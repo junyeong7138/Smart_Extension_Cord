@@ -52,5 +52,4 @@ module SPI_Slave(
             end
         end
     end
-
 endmodule

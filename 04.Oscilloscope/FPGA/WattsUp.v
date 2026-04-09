@@ -122,5 +122,4 @@ module WattsUp(
         .miso(RPI_SPI_MISO),
         .tx_data(tx_data_32)
     );
-
 endmodule
