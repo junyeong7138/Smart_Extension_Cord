@@ -11,8 +11,8 @@ The system monitors four tactile switches (Button 0 to 3) on the FPGA. When a bu
 - **Raspberry Pi Integration**: A Python-based script processes the incoming SPI packets and displays the active button index on the terminal.
 
 ## Hardware Components
-- **FPGA**: [Your FPGA Model, e.g., Cyclone IV]
-- **Processor**: Raspberry Pi [Model]
+- **FPGA**: [DE2-115, e.g., Cyclone IV]
+- **Processor**: Raspberry Pi [4 Model B]
 - **Interface**: SPI Pins (MOSI, MISO, SCLK, CS)
 
 ## How to Run
