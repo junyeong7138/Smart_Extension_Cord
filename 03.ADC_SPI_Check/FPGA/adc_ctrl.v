@@ -72,5 +72,4 @@ module adc_ctrl(
             end
         end
     end
-
 endmodule
