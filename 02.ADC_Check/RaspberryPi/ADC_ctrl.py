@@ -42,3 +42,4 @@ except KeyboardInterrupt:
 
 finally:
     spi.close()
+    
