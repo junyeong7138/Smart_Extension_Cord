@@ -20,4 +20,4 @@ The system monitors four tactile switches (Button 0 to 3) on the FPGA. When a bu
 2. Ensure the SPI interface is enabled on your Raspberry Pi.
 3. Run the monitoring script:
    ```bash
-   python3 button_monitor.py
+   python3 SPI_ctrl.py
