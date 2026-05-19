@@ -1,0 +1,8 @@
+[23:24:00] 🔄 [교정] 전력(3007.7W) 낮음! DRYER -> FAN 교정!
+[23:24:00] 🟢 [ADD EVENT] 'FAN' 켜짐! (변화량: 3007.7W)
+[23:24:00] 📺 [UI 화면 갱신] 장부: ['fan'] | 소켓화면: ['FAN_ON', 'EMPTY', 'EMPTY', 'EMPTY']
+[23:24:05] 🔄 [교정] 전력(3801.0W) 낮음! DRYER -> FAN 교정!
+[23:24:24] 🟢 [ADD EVENT] 'DRYER' 켜짐! (변화량: 182136.2W)
+[23:24:24] 📺 [UI 화면 갱신] 장부: ['fan', 'dryer'] | 소켓화면: ['FAN_ON', 'DRYER_ON', 'EMPTY', 'EMPTY']
+[23:24:34] 🔴 [REMOVE EVENT] 'DRYER' 꺼짐! (-204319.5W)
+[23:24:34] 📺 [UI 화면 갱신] 장부: ['fan'] | 소켓화면: ['FAN_ON', 'DRYER_OFF', 'EMPTY', 'EMPTY']

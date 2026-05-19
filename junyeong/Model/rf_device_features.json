@@ -1,0 +1,106 @@
+{
+  "target_type": "device",
+  "feature_names": [
+    "Irms_adc_mean",
+    "Irms_adc_std",
+    "P_proxy_mean",
+    "P_proxy_std",
+    "Pabs_mean_proxy_mean",
+    "Pabs_mean_proxy_std",
+    "Pstd_proxy_mean",
+    "Pstd_proxy_std",
+    "crest_factor_i_mean",
+    "crest_factor_i_std",
+    "H1_60_mag_mean",
+    "H1_60_mag_std",
+    "H3_180_mag_mean",
+    "H3_180_mag_std",
+    "H5_300_mag_mean",
+    "H5_300_mag_std",
+    "H7_420_mag_mean",
+    "H7_420_mag_std",
+    "THD_i_mean",
+    "THD_i_std"
+  ],
+  "window_size": 10,
+  "window_step": 5,
+  "device_prototypes": {
+    "charger": {
+      "P_proxy": 122476.49313559696,
+      "Irms_adc": 93.80725557099237,
+      "H1_60_mag": 905.9487226106869
+    },
+    "cooker": {
+      "P_proxy": 148932.91619973895,
+      "Irms_adc": 200.73172676948357,
+      "H1_60_mag": 8710.29825508075
+    },
+    "dryer": {
+      "P_proxy": 66119.00914808363,
+      "Irms_adc": 333.3481487658971,
+      "H1_60_mag": 15406.95940002764
+    },
+    "fan": {
+      "P_proxy": 88412.8872360992,
+      "Irms_adc": 77.54487568957617,
+      "H1_60_mag": 691.9386309664376
+    }
+  },
+  "class_ranges": {
+    "charger": {
+      "P_proxy_p10": 16714.216736000002,
+      "P_proxy_p50": 172453.3141327,
+      "P_proxy_p90": 179695.4939867,
+      "Irms_adc_p10": 91.10615849999999,
+      "Irms_adc_p50": 94.06339679999999,
+      "Irms_adc_p90": 96.46684559999998,
+      "H1_60_mag_p10": 792.1401903,
+      "H1_60_mag_p50": 916.0345832999999,
+      "H1_60_mag_p90": 1010.756839
+    },
+    "cooker": {
+      "P_proxy_p10": 21807.45935374,
+      "P_proxy_p50": 163376.7421132,
+      "P_proxy_p90": 214422.95586400002,
+      "Irms_adc_p10": 36.71994007999999,
+      "Irms_adc_p50": 92.17275500000001,
+      "Irms_adc_p90": 362.63837786,
+      "H1_60_mag_p10": 956.12778072,
+      "H1_60_mag_p50": 2841.1095186,
+      "H1_60_mag_p90": 17383.109508240002
+    },
+    "dryer": {
+      "P_proxy_p10": -225240.35303,
+      "P_proxy_p50": 109316.99716,
+      "P_proxy_p90": 187015.92975345,
+      "Irms_adc_p10": 70.61032355,
+      "Irms_adc_p50": 326.0705389,
+      "Irms_adc_p90": 759.1001593000001,
+      "H1_60_mag_p10": 2960.39155655,
+      "H1_60_mag_p50": 10065.426470849998,
+      "H1_60_mag_p90": 37337.8175021
+    },
+    "fan": {
+      "P_proxy_p10": 13169.71862016,
+      "P_proxy_p50": 28475.479673399997,
+      "P_proxy_p90": 181166.46188682,
+      "Irms_adc_p10": 67.45025378,
+      "Irms_adc_p50": 74.066137,
+      "Irms_adc_p90": 89.99637148,
+      "H1_60_mag_p10": 619.72527796,
+      "H1_60_mag_p50": 680.9828434,
+      "H1_60_mag_p90": 768.3455607400001
+    }
+  },
+  "metrics": {
+    "accuracy": 1.0,
+    "n_train_window": 2733,
+    "n_test_window": 1225,
+    "classes": [
+      "charger",
+      "cooker",
+      "dryer",
+      "fan"
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "feature_names": [
+    "Irms_adc_mean",
+    "Irms_adc_median",
+    "Irms_adc_max",
+    "Ipeak_adc_mean",
+    "Iabs_mean_adc_mean",
+    "P_proxy_mean",
+    "P_proxy_median",
+    "P_proxy_max",
+    "Pabs_mean_proxy_mean",
+    "Ppeak_proxy_mean",
+    "delta_Irms_adc_avg_mean",
+    "delta_P_proxy_avg_mean",
+    "H1_60_mag_mean",
+    "H3_180_mag_mean",
+    "H5_300_mag_mean",
+    "H7_420_mag_mean",
+    "THD_i_mean",
+    "H3_ratio_mean",
+    "H5_ratio_mean",
+    "H7_ratio_mean",
+    "fft_peak_freq_mean",
+    "fft_peak_mag_mean",
+    "crest_factor_i_mean"
+  ],
+  "pair_labels": [
+    "charger+cooker",
+    "charger+dryer",
+    "charger+fan",
+    "cooker+dryer",
+    "cooker+fan",
+    "dryer+fan"
+  ],
+  "source_debug_csv": "/home/wattsup/Project/81.WattsUp_NILM copy/Model/rf_training_dataset_debug.csv",
+  "n_samples": 2400
+}

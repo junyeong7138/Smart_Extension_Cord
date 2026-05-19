@@ -1,0 +1,48 @@
+{
+  "target_type": "device",
+  "feature_names": [
+    "Irms_adc_mean",
+    "Irms_adc_std",
+    "P_proxy_mean",
+    "P_proxy_std",
+    "Pabs_mean_proxy_mean",
+    "Pabs_mean_proxy_std",
+    "Pstd_proxy_mean",
+    "Pstd_proxy_std",
+    "crest_factor_i_mean",
+    "crest_factor_i_std",
+    "H1_60_mag_mean",
+    "H1_60_mag_std",
+    "H3_180_mag_mean",
+    "H3_180_mag_std",
+    "H5_300_mag_mean",
+    "H5_300_mag_std",
+    "H7_420_mag_mean",
+    "H7_420_mag_std",
+    "THD_i_mean",
+    "THD_i_std"
+  ],
+  "device_prototypes": {
+    "charger": {
+      "P_proxy": 172453.3141327,
+      "Irms_adc": 94.06339679999999,
+      "H1_60_mag": 916.0345832999999
+    },
+    "cooker": {
+      "P_proxy": 163376.7421132,
+      "Irms_adc": 92.17275500000001,
+      "H1_60_mag": 2841.1095186
+    },
+    "dryer": {
+      "P_proxy": 109316.99716,
+      "Irms_adc": 326.0705389,
+      "H1_60_mag": 10065.426470849998
+    },
+    "fan": {
+      "P_proxy": 28475.479673399997,
+      "Irms_adc": 74.066137,
+      "H1_60_mag": 680.9828434
+    }
+  },
+  "window_size": 10
+}
