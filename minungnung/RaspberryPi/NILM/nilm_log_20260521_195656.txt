@@ -1,2 +1,0 @@
-2026-05-21 19:56:56,797 [INFO] [RELAY] init pins={1: 17, 2: 27, 3: 22, 4: 23} active_high=True real_gpio=True
-2026-05-21 19:56:56,847 [INFO] [MOBILE UI] serving on http://0.0.0.0:5000
