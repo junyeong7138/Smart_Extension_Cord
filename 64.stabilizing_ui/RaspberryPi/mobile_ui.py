@@ -114,28 +114,6 @@ INDEX_HTML = """<!doctype html>
     .toast.ok  { border-color: #4caf50; }
     .toast.err { border-color: #c0504d; }
     .footer { margin-top: 22px; font-size: 11px; color: #555; text-align: center; }
-
-    /* "Stabilizing" 팝업 (모니터 UI 의 StabilizingOverlay 와 동일 의미) */
-    .stab-overlay {
-      position: fixed; inset: 0; z-index: 50;
-      background: rgba(0,0,0,.55);
-      display: flex; align-items: center; justify-content: center;
-      opacity: 0; pointer-events: none; transition: opacity .2s;
-    }
-    .stab-overlay.show { opacity: 1; pointer-events: auto; }
-    .stab-card {
-      background: #23272e; border: 2px solid #4caf50; border-radius: 16px;
-      padding: 26px 30px; width: 80%; max-width: 360px; text-align: center;
-      box-shadow: 0 8px 30px rgba(0,0,0,.55);
-    }
-    .stab-title { font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 14px; }
-    .stab-pct { font-size: 30px; font-weight: 800; color: #4caf50; margin-bottom: 14px; }
-    .stab-bar { height: 12px; background: #3a3f47; border-radius: 6px; overflow: hidden; }
-    .stab-bar-fg {
-      height: 100%; width: 0%; background: #4caf50; border-radius: 6px;
-      transition: width .25s;
-    }
-    .stab-sub { margin-top: 12px; font-size: 12px; color: #aab2bd; }
   </style>
 </head>
 <body>
@@ -160,21 +138,9 @@ INDEX_HTML = """<!doctype html>
   <div class="footer">NILM intelligent multi-tap</div>
   <div id="toast" class="toast"></div>
 
-  <!-- 안정화 중(Stabilizing) 팝업: cooldown>0 동안 표시, 0 이 되면 사라짐 -->
-  <div id="stab" class="stab-overlay">
-    <div class="stab-card">
-      <div class="stab-title">Stabilizing...</div>
-      <div class="stab-pct" id="stab-pct">0%</div>
-      <div class="stab-bar"><div class="stab-bar-fg" id="stab-bar-fg"></div></div>
-      <div class="stab-sub">please wait</div>
-    </div>
-  </div>
-
 <script>
   const SOCKETS = [1, 2, 3, 4];
   let busy = false;
-  let stabPeak = 0;   // 현재 안정화 episode 의 cooldown 최댓값
-  let lastCd = 0;     // 마지막으로 본 cooldown (적응형 새로고침 간격용)
 
   function fmt(n, digits) {
     if (n === null || n === undefined || isNaN(n)) return '--';
@@ -193,27 +159,9 @@ INDEX_HTML = """<!doctype html>
     return relayOn ? 'ON' : 'OFF';
   }
 
-  // cooldown(안정화 카운터) → 팝업 표시/퍼센트/숨김.
-  // cooldown 이 처음 보인 최댓값을 peak 로 잡고 percent=(1-cd/peak)*100,
-  // cooldown 이 0 이 되면 100% 의미로 팝업을 숨긴다 (모니터 UI 와 동일).
-  function updateStabilizing(cd) {
-    cd = Number(cd) || 0;
-    lastCd = cd;
-    const box = document.getElementById('stab');
-    if (cd <= 0) { box.classList.remove('show'); stabPeak = 0; return; }
-    if (cd > stabPeak) stabPeak = cd;
-    const pct = Math.max(0, Math.min(100, (1 - cd / Math.max(stabPeak, 1)) * 100));
-    document.getElementById('stab-pct').textContent = Math.round(pct) + '%';
-    document.getElementById('stab-bar-fg').style.width = pct + '%';
-    box.classList.add('show');
-  }
-
   async function refresh() {
     try {
       const r = await fetch('/api/status').then(x => x.json());
-
-      // 안정화 중 팝업 (cooldown)
-      updateStabilizing(r.cooldown);
 
       // 실시간 전력
       const pw = r.power || {};
@@ -301,15 +249,8 @@ INDEX_HTML = """<!doctype html>
   }
 
   refresh();
-  // 적응형 새로고침: 안정화 중(cooldown>0)이면 0.4s 로 빠르게(팝업 % 부드럽게),
-  // 평상시엔 2s. 재스캔/토글 진행 중(busy)엔 건너뛴다 (토스트·요청 충돌 방지).
-  function scheduleNext() {
-    setTimeout(async () => {
-      if (!busy) { await refresh(); }
-      scheduleNext();
-    }, lastCd > 0 ? 400 : 2000);
-  }
-  scheduleNext();
+  // 재스캔/토글 진행 중(busy)에는 자동 새로고침을 건너뛴다 (토스트·요청 충돌 방지).
+  setInterval(() => { if (!busy) refresh(); }, 2000);
 </script>
 </body>
 </html>
@@ -355,20 +296,6 @@ def _read_sockets(orchestrator):
         return None
 
 
-def _read_cooldown(engine):
-    """엔진의 현재 event_cooldown (안정화 중 프레임 카운터). 0 이면 정상 판별 상태.
-
-    모바일 '안정화 중(Stabilizing)' 팝업이 cooldown>0 동안 0~100% 진행률을 표시한다
-    (모니터 UI 의 StabilizingOverlay 와 동일 의미). engine 미주입이면 0.
-    """
-    if engine is None:
-        return 0
-    try:
-        return int(getattr(engine, "event_cooldown", 0) or 0)
-    except Exception:  # noqa: BLE001
-        return 0
-
-
 def create_app(relay, engine=None, orchestrator=None):
     app = Flask(__name__)
 
@@ -385,7 +312,6 @@ def create_app(relay, engine=None, orchestrator=None):
             state=relay.get_state(),
             sockets=_read_sockets(orchestrator),
             power=_read_power(engine),
-            cooldown=_read_cooldown(engine),
         )
 
     @app.route("/api/relay/<int:idx>/<string:action>", methods=["POST"])
@@ -416,7 +342,6 @@ def create_app(relay, engine=None, orchestrator=None):
             state=relay.get_state(),
             sockets=_read_sockets(orchestrator),
             power=_read_power(engine),
-            cooldown=_read_cooldown(engine),
         )
 
     @app.route("/api/rescan/<int:idx>", methods=["POST"])
@@ -436,7 +361,6 @@ def create_app(relay, engine=None, orchestrator=None):
             state=relay.get_state(),
             sockets=_read_sockets(orchestrator),
             power=_read_power(engine),
-            cooldown=_read_cooldown(engine),
         )
 
     return app

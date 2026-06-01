@@ -76,10 +76,6 @@ class SocketDashboard:
     BORDER_ASSIGNED = "#00FF00"
     BORDER_DEVICE_OFF = "#FFA500"
 
-    # 소켓별 ON/OFF 토글 버튼 색 (relay 실제 상태 반영)
-    TOGGLE_ON_FACE = "#1f7a33"
-    TOGGLE_OFF_FACE = "#555555"
-
     STATE_LABEL = {
         "EMPTY": ("EMPTY", "white"),
         "PENDING": ("PENDING", "white"),
@@ -189,20 +185,18 @@ class SocketDashboard:
         # mobile_ui 의 재스캔과 동일 — orchestrator.rescan_socket(sk) 호출.
         # =====================================================
         self._rescan_buttons = []
-        self._toggle_buttons = []
         self._ctrl_status = self.fig.text(
             0.5, 0.985, "", ha="center", va="top", color="#9ec5ff", fontsize=10)
-        self._build_socket_controls()
+        self._build_rescan_controls()
 
         # "안정화 중(Stabilizing)" 팝업 — cooldown>0 동안 0~100% 표시 (맨 위 오버레이).
         self.stab_overlay = StabilizingOverlay(self.fig) if StabilizingOverlay else None
 
     # =========================================================
-    # 소켓 컨트롤 (소켓별 ON/OFF 토글 + 재스캔)
+    # 재스캔 컨트롤 (소켓별)
     # =========================================================
-    def _build_socket_controls(self):
-        """row1 밴드에 소켓별 [ON/OFF] + [재스캔] 버튼 생성 (mobile_ui 와 동일 기능).
-        ON/OFF → relay.toggle + orchestrator 동기, 재스캔 → rescan_socket."""
+    def _build_rescan_controls(self):
+        """row1 밴드에 소켓별 [🔄 재스캔] 버튼 생성. → orchestrator.rescan_socket(sk)."""
         band = self.gs[1, :].get_position(self.fig)
         by0, by1 = band.y0, band.y1
         h = (by1 - by0) * 0.62
@@ -212,50 +206,12 @@ class SocketDashboard:
             col = self.gs[0, i].get_position(self.fig)
             xL, xR = col.x0, col.x1
             cw = xR - xL
-            # 왼쪽: ON/OFF 토글 (relay 실제 상태 반영)
-            ax_t = self.fig.add_axes([xL + cw * 0.08, y, cw * 0.40, h])
-            bt = Button(ax_t, "OFF", color=self.TOGGLE_OFF_FACE, hovercolor="#6a6a6a")
-            bt.label.set_color("#cccccc")
-            bt.label.set_fontsize(11)
-            bt.label.set_fontweight("bold")
-            bt.on_clicked(partial(self._on_toggle, sk))
-            self._toggle_buttons.append(bt)
-            # 오른쪽: 재스캔
-            ax_r = self.fig.add_axes([xL + cw * 0.52, y, cw * 0.40, h])
-            br = Button(ax_r, _LBL_RESCAN, color="#2d3a4a", hovercolor="#3d5570")
-            br.label.set_color("#9ec5ff")
-            br.label.set_fontsize(11)
-            br.on_clicked(partial(self._on_rescan, sk))
-            self._rescan_buttons.append(br)   # 참조 보존 (GC 시 콜백 죽음 방지)
-        self._refresh_toggle_buttons()
-
-    def _refresh_toggle_buttons(self):
-        """relay 실제 상태로 각 ON/OFF 버튼의 라벨/색 갱신 (외부 토글·자동 OFF 도 반영)."""
-        try:
-            state = self.orchestrator.relay.get_state()
-        except Exception:  # noqa: BLE001
-            return
-        for i, b in enumerate(self._toggle_buttons):
-            on = bool(state.get(i + 1, False))
-            b.label.set_text("ON" if on else "OFF")
-            face = self.TOGGLE_ON_FACE if on else self.TOGGLE_OFF_FACE
-            b.color = face                      # hover 복귀색
-            b.ax.set_facecolor(face)            # 현재 표시색
-            b.label.set_color("#ffffff" if on else "#cccccc")
-
-    def _on_toggle(self, sk, _event):
-        """ON/OFF 버튼: relay 토글 + orchestrator state 동기 (mobile_ui 와 동일)."""
-        try:
-            self.orchestrator.relay.toggle(sk)
-            try:
-                self.orchestrator.on_external_relay_change(sk)
-            except Exception as e:  # noqa: BLE001
-                logging.warning(f"[DASH] orchestrator sync 실패: {e}")
-            self._refresh_toggle_buttons()
-            on = bool(self.orchestrator.relay.get_state().get(sk, False))
-            self._set_status(f"소켓{sk} 릴레이 {'ON' if on else 'OFF'}")
-        except Exception as e:  # noqa: BLE001
-            self._set_status(f"소켓{sk} 토글 오류: {e}")
+            ax = self.fig.add_axes([xL + cw * 0.12, y, cw * 0.76, h])
+            b = Button(ax, _LBL_RESCAN, color="#2d3a4a", hovercolor="#3d5570")
+            b.label.set_color("#9ec5ff")
+            b.label.set_fontsize(11)
+            b.on_clicked(partial(self._on_rescan, sk))
+            self._rescan_buttons.append(b)   # 참조 보존 (GC 시 콜백 죽음 방지)
 
     def _on_rescan(self, sk, _event):
         """재스캔 버튼: 해당 소켓만 릴레이 토글 → AI 재분류 (mobile_ui 와 동일 기능)."""
@@ -365,9 +321,6 @@ class SocketDashboard:
                     getattr(self.orchestrator, "last_event", "-") or "-"),
             ]
             self.info_text.set_text("\n".join(info_lines))
-
-        # ON/OFF 토글 버튼을 relay 실제 상태로 동기 (자동 OFF/재스캔/외부 토글 반영)
-        self._refresh_toggle_buttons()
 
         # "안정화 중" 팝업: cooldown>0 이면 표시(0~100%), 0 이면 숨김. (표시 전용)
         if self.stab_overlay is not None:
