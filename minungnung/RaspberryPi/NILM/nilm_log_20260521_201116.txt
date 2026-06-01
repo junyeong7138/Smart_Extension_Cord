@@ -1,0 +1,154 @@
+2026-05-21 20:11:16,320 [INFO] [RELAY] init pins={1: 17, 2: 27, 3: 22, 4: 23} active_high=True real_gpio=True
+2026-05-21 20:11:16,376 [INFO] [MOBILE UI] serving on http://0.0.0.0:5000
+2026-05-21 20:11:18,540 [INFO] Model loaded. classes=['charger', 'cleaner', 'dryer', 'microwave', 'tv']
+2026-05-21 20:11:18,541 [INFO] Feature count: 20
+2026-05-21 20:11:18,541 [INFO] Model dir: /home/wattsup/Project/kwon/Model
+2026-05-21 20:11:22,079 [INFO] [INIT BASELINE] Irms=90.14, H1=29.35
+2026-05-21 20:11:22,079 [INFO] [STARTUP] Irms=90.14 높지만 H1=29.35 < 300.0 → 센서 idle 오프셋으로 처리.
+2026-05-21 20:11:29,879 [INFO] [NEAR-MISS] d_irms=-9.7, d_h1=24.5, baseline_irms=90.7, baseline_h1=32.2
+2026-05-21 20:11:30,477 [INFO] [OFF-REJECT] cond2 d_irms=-15.8, d_h1=42.4 (transient 가능성)
+2026-05-21 20:11:30,777 [INFO] [OFF-REJECT] cond2 d_irms=-19.0, d_h1=49.0 (transient 가능성)
+2026-05-21 20:11:31,084 [INFO] [OFF-REJECT] cond2 d_irms=-22.1, d_h1=59.7 (transient 가능성)
+2026-05-21 20:11:31,085 [INFO] [NEAR-MISS] d_irms=-22.1, d_h1=59.7, baseline_irms=90.3, baseline_h1=33.1
+2026-05-21 20:11:31,390 [INFO] [OFF-REJECT] cond2 d_irms=-25.3, d_h1=67.0 (transient 가능성)
+2026-05-21 20:11:31,697 [INFO] [OFF-REJECT] cond2 d_irms=-28.3, d_h1=73.2 (transient 가능성)
+2026-05-21 20:11:32,000 [INFO] [OFF-REJECT] cond2 d_irms=-31.5, d_h1=88.8 (transient 가능성)
+2026-05-21 20:11:32,307 [INFO] [OFF-REJECT] cond2 d_irms=-31.2, d_h1=100.6 (transient 가능성)
+2026-05-21 20:11:32,308 [INFO] [NEAR-MISS] d_irms=-31.2, d_h1=100.6, baseline_irms=89.7, baseline_h1=34.9
+2026-05-21 20:11:32,613 [INFO] [OFF-REJECT] cond2 d_irms=-30.9, d_h1=110.7 (transient 가능성)
+2026-05-21 20:11:32,916 [INFO] [OFF-REJECT] cond2 d_irms=-29.9, d_h1=182.4 (transient 가능성)
+2026-05-21 20:11:33,225 [INFO] [OFF-REJECT] cond2 d_irms=-29.2, d_h1=224.7 (transient 가능성)
+2026-05-21 20:11:33,526 [INFO] [OFF-REJECT] cond2 d_irms=-28.1, d_h1=284.4 (transient 가능성)
+2026-05-21 20:11:33,527 [INFO] [NEAR-MISS] d_irms=-28.1, d_h1=284.4, baseline_irms=89.0, baseline_h1=38.6
+2026-05-21 20:11:33,833 [INFO] [OFF-REJECT] cond2 d_irms=-27.1, d_h1=341.4 (transient 가능성)
+2026-05-21 20:11:34,140 [INFO] [OFF-REJECT] cond2 d_irms=-26.7, d_h1=364.4 (transient 가능성)
+2026-05-21 20:11:34,443 [INFO] [OFF-REJECT] cond2 d_irms=-26.3, d_h1=380.4 (transient 가능성)
+2026-05-21 20:11:34,747 [INFO] [OFF-REJECT] cond2 d_irms=-26.0, d_h1=409.5 (transient 가능성)
+2026-05-21 20:11:34,748 [INFO] [NEAR-MISS] d_irms=-26.0, d_h1=409.5, baseline_irms=88.3, baseline_h1=46.8
+2026-05-21 20:11:35,054 [INFO] [OFF-REJECT] cond2 d_irms=-25.5, d_h1=431.0 (transient 가능성)
+2026-05-21 20:11:35,360 [INFO] [OFF-REJECT] cond2 d_irms=-24.9, d_h1=446.1 (transient 가능성)
+2026-05-21 20:11:35,666 [INFO] [OFF-REJECT] cond2 d_irms=-23.0, d_h1=532.8 (transient 가능성)
+2026-05-21 20:11:35,972 [INFO] [OFF-REJECT] cond2 d_irms=-22.2, d_h1=559.5 (transient 가능성)
+2026-05-21 20:11:35,972 [INFO] [NEAR-MISS] d_irms=-22.2, d_h1=559.5, baseline_irms=87.7, baseline_h1=57.7
+2026-05-21 20:11:36,279 [INFO] [OFF-REJECT] cond2 d_irms=-21.0, d_h1=614.0 (transient 가능성)
+2026-05-21 20:11:36,584 [INFO] [OFF-REJECT] cond2 d_irms=-20.7, d_h1=627.8 (transient 가능성)
+2026-05-21 20:11:36,887 [INFO] [OFF-REJECT] cond2 d_irms=-21.0, d_h1=618.8 (transient 가능성)
+2026-05-21 20:11:37,196 [INFO] [OFF-REJECT] cond2 d_irms=-20.3, d_h1=648.6 (transient 가능성)
+2026-05-21 20:11:37,196 [INFO] [NEAR-MISS] d_irms=-20.3, d_h1=648.6, baseline_irms=87.2, baseline_h1=72.2
+2026-05-21 20:11:37,503 [INFO] [OFF-REJECT] cond2 d_irms=-19.4, d_h1=707.2 (transient 가능성)
+2026-05-21 20:11:37,805 [INFO] [OFF-REJECT] cond2 d_irms=-18.1, d_h1=762.7 (transient 가능성)
+2026-05-21 20:11:38,116 [INFO] [OFF-REJECT] cond2 d_irms=-16.5, d_h1=825.1 (transient 가능성)
+2026-05-21 20:11:38,421 [INFO] [OFF-REJECT] cond2 d_irms=-15.4, d_h1=884.5 (transient 가능성)
+2026-05-21 20:11:38,421 [INFO] [NEAR-MISS] d_irms=-15.4, d_h1=884.5, baseline_irms=86.8, baseline_h1=89.9
+2026-05-21 20:11:38,726 [INFO] [OFF-REJECT] cond2 d_irms=-14.9, d_h1=897.5 (transient 가능성)
+2026-05-21 20:11:39,030 [INFO] [OFF-REJECT] cond2 d_irms=-15.3, d_h1=862.9 (transient 가능성)
+2026-05-21 20:11:39,334 [INFO] [OFF-REJECT] cond2 d_irms=-16.0, d_h1=831.4 (transient 가능성)
+2026-05-21 20:11:39,638 [INFO] [OFF-REJECT] cond2 d_irms=-16.5, d_h1=797.1 (transient 가능성)
+2026-05-21 20:11:39,638 [INFO] [NEAR-MISS] d_irms=-16.5, d_h1=797.1, baseline_irms=86.4, baseline_h1=110.8
+2026-05-21 20:11:39,942 [INFO] [OFF-REJECT] cond2 d_irms=-15.9, d_h1=801.7 (transient 가능성)
+2026-05-21 20:11:40,251 [INFO] [OFF-REJECT] cond2 d_irms=-15.5, d_h1=819.0 (transient 가능성)
+2026-05-21 20:11:40,555 [INFO] [OFF-REJECT] cond2 d_irms=-15.2, d_h1=825.0 (transient 가능성)
+2026-05-21 20:11:40,859 [INFO] [OFF-REJECT] cond2 d_irms=-14.8, d_h1=823.1 (transient 가능성)
+2026-05-21 20:11:40,859 [INFO] [NEAR-MISS] d_irms=-14.8, d_h1=823.1, baseline_irms=86.0, baseline_h1=130.2
+2026-05-21 20:11:41,169 [INFO] [OFF-REJECT] cond2 d_irms=-11.8, d_h1=1131.7 (transient 가능성)
+2026-05-21 20:11:41,474 [INFO] [OFF-REJECT] cond2 d_irms=-11.5, d_h1=1138.3 (transient 가능성)
+2026-05-21 20:11:41,781 [INFO] [OFF-REJECT] cond2 d_irms=-12.7, d_h1=1097.1 (transient 가능성)
+2026-05-21 20:11:42,090 [INFO] [OFF-REJECT] cond2 d_irms=-13.3, d_h1=1077.5 (transient 가능성)
+2026-05-21 20:11:42,090 [INFO] [NEAR-MISS] d_irms=-13.3, d_h1=1077.5, baseline_irms=85.7, baseline_h1=155.3
+2026-05-21 20:11:42,395 [INFO] [OFF-REJECT] cond2 d_irms=-13.5, d_h1=1050.8 (transient 가능성)
+2026-05-21 20:11:42,700 [INFO] [OFF-REJECT] cond2 d_irms=-13.1, d_h1=1053.8 (transient 가능성)
+2026-05-21 20:11:43,006 [INFO] [OFF-REJECT] cond2 d_irms=-12.9, d_h1=1062.5 (transient 가능성)
+2026-05-21 20:11:43,317 [INFO] [OFF-REJECT] cond2 d_irms=-12.7, d_h1=1063.4 (transient 가능성)
+2026-05-21 20:11:43,320 [INFO] [NEAR-MISS] d_irms=-12.7, d_h1=1063.4, baseline_irms=85.4, baseline_h1=180.8
+2026-05-21 20:11:43,627 [INFO] [OFF-REJECT] cond2 d_irms=-12.4, d_h1=1066.6 (transient 가능성)
+2026-05-21 20:11:43,929 [INFO] [OFF-REJECT] cond2 d_irms=-12.4, d_h1=1084.6 (transient 가능성)
+2026-05-21 20:11:44,236 [INFO] [OFF-REJECT] cond2 d_irms=-15.4, d_h1=798.3 (transient 가능성)
+2026-05-21 20:11:44,538 [INFO] [OFF-REJECT] cond2 d_irms=-14.4, d_h1=931.2 (transient 가능성)
+2026-05-21 20:11:44,539 [INFO] [NEAR-MISS] d_irms=-14.4, d_h1=931.2, baseline_irms=85.1, baseline_h1=204.9
+2026-05-21 20:11:44,845 [INFO] [OFF-REJECT] cond2 d_irms=-12.0, d_h1=1092.2 (transient 가능성)
+2026-05-21 20:11:45,155 [INFO] [OFF-REJECT] cond2 d_irms=-9.4, d_h1=1282.1 (transient 가능성)
+2026-05-21 20:11:45,463 [INFO] [OFF-REJECT] cond2 d_irms=-6.5, d_h1=1472.0 (transient 가능성)
+2026-05-21 20:11:45,770 [INFO] [NEAR-MISS] d_irms=-4.2, d_h1=1657.0, baseline_irms=84.8, baseline_h1=233.6
+2026-05-21 20:11:46,933 [INFO] [NEAR-MISS] d_irms=4.0, d_h1=2225.5, baseline_irms=84.8, baseline_h1=278.9
+2026-05-21 20:11:48,149 [INFO] [NEAR-MISS] d_irms=5.0, d_h1=2238.7, baseline_irms=84.9, baseline_h1=333.7
+2026-05-21 20:11:49,317 [INFO] [NEAR-MISS] d_irms=-0.4, d_h1=1942.4, baseline_irms=85.0, baseline_h1=385.1
+2026-05-21 20:11:50,477 [INFO] [NEAR-MISS] d_irms=-3.0, d_h1=1722.5, baseline_irms=85.0, baseline_h1=429.6
+2026-05-21 20:11:51,641 [INFO] [NEAR-MISS] d_irms=-1.2, d_h1=1710.2, baseline_irms=84.9, baseline_h1=470.4
+2026-05-21 20:11:52,856 [INFO] [NEAR-MISS] d_irms=0.3, d_h1=1745.9, baseline_irms=84.9, baseline_h1=512.0
+2026-05-21 20:11:54,027 [INFO] [NEAR-MISS] d_irms=-2.6, d_h1=1597.4, baseline_irms=84.9, baseline_h1=552.9
+2026-05-21 20:11:54,910 [INFO] [EVENT-TRIG] cond2 ON d_irms=37.2, d_h1=3932.4
+2026-05-21 20:11:54,910 [INFO] [PENDING ON] start frame=119, wait=8, pre_I=84.8, pre_H1=581.0
+2026-05-21 20:11:57,455 [INFO] [ID-STABLE] chosen=cleaner conf=0.58 method=cleaner_delta_abs_priority details={'abs': 'cleaner:0.52', 'delta': 'cleaner:0.58', 'range': 'dryer:0.00', 'dI': 126.7, 'dH1': 9193.4, 'dPabs': 64577.8}
+2026-05-21 20:11:57,457 [INFO] [ID-STABLE] probs_abs={'charger': 0.01, 'cleaner': 0.523, 'dryer': 0.36, 'microwave': 0.103, 'tv': 0.003}
+2026-05-21 20:11:57,457 [INFO] [ID-STABLE] probs_delta={'charger': 0.187, 'cleaner': 0.577, 'dryer': 0.153, 'microwave': 0.007, 'tv': 0.077}
+2026-05-21 20:11:57,458 [INFO] [ID-STABLE] range_scores={'charger': 33.241, 'cleaner': 1.483, 'dryer': 0.0, 'microwave': 2.673, 'tv': 11.987}
+2026-05-21 20:11:57,458 [INFO] [DEVICE ON] Socket1 <- cleaner (600W, conf=0.58, method=cleaner_delta_abs_priority, d_irms=126.7, d_h1=9193.4, d_pabs=64577.8, details={'abs': 'cleaner:0.52', 'delta': 'cleaner:0.58', 'range': 'dryer:0.00', 'dI': 126.7, 'dH1': 9193.4, 'dPabs': 64577.8})
+2026-05-21 20:12:01,254 [INFO] [NEAR-MISS] d_irms=-0.5, d_h1=-31.9, baseline_irms=184.4, baseline_h1=8295.8
+2026-05-21 20:12:02,474 [INFO] [NEAR-MISS] d_irms=0.5, d_h1=73.4, baseline_irms=184.2, baseline_h1=8298.6
+2026-05-21 20:12:03,681 [INFO] [NEAR-MISS] d_irms=4.4, d_h1=201.6, baseline_irms=184.2, baseline_h1=8301.2
+2026-05-21 20:12:04,286 [INFO] [EVENT-TRIG] cond2 OFF d_irms=-14.5, d_h1=-1006.9
+2026-05-21 20:12:04,286 [INFO] [DEVICE OFF] Socket1 (cleaner) by signature score=0.00, drop_I=14.5, drop_H1=1006.9, drop_Pabs=8684.1
+2026-05-21 20:12:06,047 [INFO] [EVENT-TRIG] cond2 OFF d_irms=-11.3, d_h1=-653.7
+2026-05-21 20:12:06,047 [WARNING] [OFF SKIP] no active devices d_irms=-11.3, d_h1=-653.7
+2026-05-21 20:12:11,828 [INFO] [NEAR-MISS] d_irms=-2.8, d_h1=-43.2, baseline_irms=84.2, baseline_h1=2194.8
+2026-05-21 20:12:13,018 [INFO] [NEAR-MISS] d_irms=-3.2, d_h1=-37.2, baseline_irms=84.1, baseline_h1=2193.6
+2026-05-21 20:12:14,247 [INFO] [NEAR-MISS] d_irms=-0.1, d_h1=91.7, baseline_irms=83.5, baseline_h1=2193.6
+2026-05-21 20:12:14,867 [INFO] [EVENT-TRIG] cond2 ON d_irms=75.7, d_h1=4026.8
+2026-05-21 20:12:14,868 [INFO] [PENDING ON] start frame=186, wait=8, pre_I=83.5, pre_H1=2194.9
+2026-05-21 20:12:17,366 [INFO] [ID-STABLE] chosen=dryer conf=0.97 method=dryer_strong_guarded details={'abs': 'dryer:0.50', 'delta': 'dryer:0.97', 'range': 'dryer:0.27', 'dI': 659.5, 'dH1': 34233.1, 'dPabs': 375606.4}
+2026-05-21 20:12:17,367 [INFO] [ID-STABLE] probs_abs={'charger': 0.0, 'cleaner': 0.197, 'dryer': 0.497, 'microwave': 0.307, 'tv': 0.0}
+2026-05-21 20:12:17,367 [INFO] [ID-STABLE] probs_delta={'charger': 0.0, 'cleaner': 0.0, 'dryer': 0.97, 'microwave': 0.027, 'tv': 0.003}
+2026-05-21 20:12:17,368 [INFO] [ID-STABLE] range_scores={'charger': 149.238, 'cleaner': 18.965, 'dryer': 0.272, 'microwave': 1.947, 'tv': 66.649}
+2026-05-21 20:12:17,369 [INFO] [DEVICE ON] Socket2 <- dryer (1800W, conf=0.97, method=dryer_strong_guarded, d_irms=659.5, d_h1=34233.1, d_pabs=375606.4, details={'abs': 'dryer:0.50', 'delta': 'dryer:0.97', 'range': 'dryer:0.27', 'dI': 659.5, 'dH1': 34233.1, 'dPabs': 375606.4})
+2026-05-21 20:12:20,357 [INFO] [NEAR-MISS] d_irms=-5.2, d_h1=-382.5, baseline_irms=815.0, baseline_h1=40121.6
+2026-05-21 20:12:20,967 [INFO] [EVENT-TRIG] cond2 OFF d_irms=-6.6, d_h1=-464.5
+2026-05-21 20:12:20,968 [WARNING] [OFF REJECT] no matching active signature drop={'delta_irms': 6.642111723100015, 'delta_h1': 464.4844674595224, 'delta_pabs': 6595.693316007266}
+2026-05-21 20:12:22,726 [INFO] [NEAR-MISS] d_irms=-1.8, d_h1=36.0, baseline_irms=808.1, baseline_h1=39514.3
+2026-05-21 20:12:23,677 [INFO] [EVENT-TRIG] cond2 OFF d_irms=-72.5, d_h1=-3689.1
+2026-05-21 20:12:23,678 [INFO] [DEVICE OFF] Socket2 (dryer) by signature score=0.00, drop_I=72.5, drop_H1=3689.1, drop_Pabs=43708.1
+2026-05-21 20:12:25,438 [INFO] [EVENT-TRIG] cond2 OFF d_irms=-72.4, d_h1=-3744.7
+2026-05-21 20:12:25,439 [WARNING] [OFF SKIP] no active devices d_irms=-72.4, d_h1=-3744.7
+2026-05-21 20:12:28,701 [INFO] [NEAR-MISS] d_irms=0.4, d_h1=49.5, baseline_irms=81.7, baseline_h1=2327.3
+2026-05-21 20:12:29,896 [INFO] [NEAR-MISS] d_irms=-1.9, d_h1=-23.6, baseline_irms=81.1, baseline_h1=2328.8
+2026-05-21 20:12:31,085 [INFO] [OFF-REJECT] cond2 d_irms=-6.7, d_h1=-192.4 (transient 가능성)
+2026-05-21 20:12:31,086 [INFO] [NEAR-MISS] d_irms=-6.7, d_h1=-192.4, baseline_irms=81.0, baseline_h1=2326.7
+2026-05-21 20:12:31,405 [INFO] [EVENT-TRIG] cond2 OFF d_irms=-6.9, d_h1=-213.3
+2026-05-21 20:12:31,406 [WARNING] [OFF SKIP] no active devices d_irms=-6.9, d_h1=-213.3
+2026-05-21 20:12:33,452 [INFO] [NEAR-MISS] d_irms=1.9, d_h1=71.3, baseline_irms=75.7, baseline_h1=2132.2
+2026-05-21 20:12:34,696 [INFO] [EVENT-TRIG] cond2 ON d_irms=39.1, d_h1=1775.4
+2026-05-21 20:12:34,697 [INFO] [PENDING ON] start frame=252, wait=8, pre_I=75.8, pre_H1=2134.9
+2026-05-21 20:12:37,219 [INFO] [ID-STABLE] chosen=microwave conf=0.77 method=rf_abs_microwave_priority details={'abs': 'microwave:0.77', 'delta': 'microwave:0.62', 'range': 'dryer:0.00', 'dI': 347.7, 'dH1': 16146.2, 'dPabs': 123062.8}
+2026-05-21 20:12:37,220 [INFO] [ID-STABLE] probs_abs={'charger': 0.003, 'cleaner': 0.05, 'dryer': 0.173, 'microwave': 0.773, 'tv': 0.0}
+2026-05-21 20:12:37,221 [INFO] [ID-STABLE] probs_delta={'charger': 0.0, 'cleaner': 0.087, 'dryer': 0.287, 'microwave': 0.623, 'tv': 0.003}
+2026-05-21 20:12:37,221 [INFO] [ID-STABLE] range_scores={'charger': 64.513, 'cleaner': 6.006, 'dryer': 0.0, 'microwave': 1.076, 'tv': 27.66}
+2026-05-21 20:12:37,223 [INFO] [DEVICE ON] Socket3 <- microwave (900W, conf=0.77, method=rf_abs_microwave_priority, d_irms=347.7, d_h1=16146.2, d_pabs=123062.8, details={'abs': 'microwave:0.77', 'delta': 'microwave:0.62', 'range': 'dryer:0.00', 'dI': 347.7, 'dH1': 16146.2, 'dPabs': 123062.8})
+2026-05-21 20:12:39,088 [INFO] [EVENT-TRIG] cond2 ON d_irms=11.7, d_h1=660.9
+2026-05-21 20:12:39,089 [INFO] [PENDING ON] start frame=266, wait=8, pre_I=524.0, pre_H1=23579.7
+2026-05-21 20:12:41,638 [INFO] [ID-STABLE] chosen=microwave conf=0.99 method=rf_abs details={'abs': 'microwave:0.99', 'delta': 'tv:0.56', 'range': 'dryer:0.06', 'dI': 35.6, 'dH1': 1956.5, 'dPabs': 49607.5}
+2026-05-21 20:12:41,639 [INFO] [ID-STABLE] probs_abs={'charger': 0.0, 'cleaner': 0.0, 'dryer': 0.007, 'microwave': 0.993, 'tv': 0.0}
+2026-05-21 20:12:41,639 [INFO] [ID-STABLE] probs_delta={'charger': 0.093, 'cleaner': 0.08, 'dryer': 0.263, 'microwave': 0.0, 'tv': 0.563}
+2026-05-21 20:12:41,640 [INFO] [ID-STABLE] range_scores={'charger': 8.785, 'cleaner': 3.129, 'dryer': 0.06, 'microwave': 3.712, 'tv': 2.229}
+2026-05-21 20:12:41,641 [INFO] [ON MODE UPDATE] microwave already active, treat as mode/power update
+2026-05-21 20:12:43,139 [INFO] [RECLASSIFY] 'microwave' signature update dI=479.1, dH1=23392.7, dPabs=268267.6
+2026-05-21 20:12:43,461 [INFO] [EVENT-TRIG] cond2 OFF d_irms=-46.1, d_h1=-2298.6
+2026-05-21 20:12:43,462 [INFO] [DEVICE OFF] Socket3 (microwave) by signature score=0.00, drop_I=46.1, drop_H1=2298.6, drop_Pabs=25308.9
+2026-05-21 20:12:45,283 [INFO] [EVENT-TRIG] cond2 OFF d_irms=-47.8, d_h1=-2324.6
+2026-05-21 20:12:45,284 [WARNING] [OFF SKIP] no active devices d_irms=-47.8, d_h1=-2324.6
+2026-05-21 20:12:48,239 [INFO] [NEAR-MISS] d_irms=0.5, d_h1=38.4, baseline_irms=77.4, baseline_h1=2215.4
+2026-05-21 20:12:49,499 [INFO] [NEAR-MISS] d_irms=2.7, d_h1=107.2, baseline_irms=77.4, baseline_h1=2217.0
+2026-05-21 20:12:50,709 [INFO] [NEAR-MISS] d_irms=4.7, d_h1=141.7, baseline_irms=77.5, baseline_h1=2220.3
+2026-05-21 20:12:51,912 [INFO] [NEAR-MISS] d_irms=3.5, d_h1=-0.5, baseline_irms=77.7, baseline_h1=2223.5
+2026-05-21 20:12:53,118 [INFO] [NEAR-MISS] d_irms=-6.0, d_h1=-607.7, baseline_irms=77.7, baseline_h1=2218.6
+2026-05-21 20:12:53,447 [INFO] [EVENT-TRIG] cond2 OFF d_irms=-8.0, d_h1=-767.1
+2026-05-21 20:12:53,447 [WARNING] [OFF SKIP] no active devices d_irms=-8.0, d_h1=-767.1
+2026-05-21 20:12:56,750 [INFO] [NEAR-MISS] d_irms=1.8, d_h1=93.7, baseline_irms=66.0, baseline_h1=898.3
+2026-05-21 20:12:57,958 [INFO] [NEAR-MISS] d_irms=1.9, d_h1=109.3, baseline_irms=66.1, baseline_h1=900.7
+2026-05-21 20:13:00,392 [INFO] [NEAR-MISS] d_irms=2.8, d_h1=63.7, baseline_irms=66.6, baseline_h1=910.9
+2026-05-21 20:13:01,613 [INFO] [NEAR-MISS] d_irms=-2.9, d_h1=-278.5, baseline_irms=66.6, baseline_h1=909.2
+2026-05-21 20:13:02,866 [INFO] [EVENT-TRIG] cond2 OFF d_irms=-6.8, d_h1=-490.0
+2026-05-21 20:13:02,867 [WARNING] [OFF SKIP] no active devices d_irms=-6.8, d_h1=-490.0
+2026-05-21 20:13:08,006 [INFO] [RELAY] socket1 pin=17 -> OFF
+2026-05-21 20:13:08,007 [INFO] [RELAY] socket2 pin=27 -> OFF
+2026-05-21 20:13:08,008 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-05-21 20:13:08,009 [INFO] [RELAY] socket4 pin=23 -> OFF
+2026-05-21 20:13:08,011 [INFO] [RELAY] closed (all OFF, GPIO cleanup)

@@ -1,0 +1,11 @@
+2026-05-29 02:32:59,609 [INFO] [RELAY] init pins={1: 17, 2: 27, 3: 22, 4: 23} active_high=True real_gpio=True
+2026-05-29 02:33:02,778 [INFO] Model loaded. classes=['charger', 'cleaner', 'dryer', 'microwave', 'tv']
+2026-05-29 02:33:02,779 [INFO] Feature count: 20
+2026-05-29 02:33:02,824 [INFO] [MOBILE UI] serving on http://0.0.0.0:5000
+2026-05-29 02:33:07,530 [INFO] [INIT BASELINE] Irms=33.29, H1=55.21, Pabs=17873.94
+2026-05-29 02:33:07,531 [INFO] [STARTUP] Irms=33.29 높지만 H1=55.21 < 300.0 → 센서 idle 노이즈/오프셋으로 처리 (기기 등록 안 함).
+2026-05-29 02:33:28,008 [INFO] [RELAY] socket1 pin=17 -> OFF
+2026-05-29 02:33:28,009 [INFO] [RELAY] socket2 pin=27 -> OFF
+2026-05-29 02:33:28,010 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-05-29 02:33:28,011 [INFO] [RELAY] socket4 pin=23 -> OFF
+2026-05-29 02:33:28,012 [INFO] [RELAY] closed (all OFF, GPIO cleanup)

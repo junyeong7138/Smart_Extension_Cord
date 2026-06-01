@@ -1,0 +1,27 @@
+2026-06-01 06:32:02,118 [INFO] [AI VERSION] ai_engine_v2_2026_05_31_off_fullscan_by_orchestrator
+2026-06-01 06:32:02,120 [INFO] [LOG FILE] /home/wattsup/Project/kim/RaspberryPi/NILM/nilm_log_20260601_063202.txt
+2026-06-01 06:32:03,525 [INFO] [RELAY] init pins={1: 17, 2: 27, 3: 22, 4: 23} active_high=True real_gpio=True
+2026-06-01 06:32:03,527 [INFO] [RELAY] socket1 pin=17 -> OFF
+2026-06-01 06:32:03,528 [INFO] [RELAY] socket2 pin=27 -> OFF
+2026-06-01 06:32:03,529 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-06-01 06:32:03,530 [INFO] [RELAY] socket4 pin=23 -> OFF
+2026-06-01 06:32:05,685 [INFO] Model loaded. classes=['charger', 'cleaner', 'dryer', 'microwave', 'tv']
+2026-06-01 06:32:05,688 [INFO] Feature count: 28
+2026-06-01 06:32:05,688 [INFO] Model dir: /home/wattsup/Project/kim/Model
+2026-06-01 06:32:05,694 [INFO] [RELAY] socket1 pin=17 -> OFF
+2026-06-01 06:32:05,695 [INFO] [RELAY] socket2 pin=27 -> OFF
+2026-06-01 06:32:05,696 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-06-01 06:32:05,696 [INFO] [RELAY] socket4 pin=23 -> OFF
+2026-06-01 06:32:05,697 [INFO] [ORCH] init: all relays OFF (safe state)
+2026-06-01 06:32:05,698 [INFO] [ORCH] engine.process_ai_frame wrapped for win_feat capture
+2026-06-01 06:32:05,698 [INFO] [TOUCH] init pin=26 active_high=True real_gpio=True
+2026-06-01 06:32:05,722 [INFO] [ORCH] monitor started
+2026-06-01 06:32:05,724 [INFO] [TOUCH] polling started
+2026-06-01 06:32:05,733 [INFO] [MOBILE UI] serving on http://0.0.0.0:5000
+2026-06-01 06:32:09,551 [INFO] [TOUCH] closed
+2026-06-01 06:32:09,623 [INFO] [ORCH] closed
+2026-06-01 06:32:09,624 [INFO] [RELAY] socket1 pin=17 -> OFF
+2026-06-01 06:32:09,625 [INFO] [RELAY] socket2 pin=27 -> OFF
+2026-06-01 06:32:09,626 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-06-01 06:32:09,627 [INFO] [RELAY] socket4 pin=23 -> OFF
+2026-06-01 06:32:09,629 [INFO] [RELAY] closed (all OFF, GPIO cleanup)

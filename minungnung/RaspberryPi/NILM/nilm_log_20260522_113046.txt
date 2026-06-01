@@ -1,0 +1,226 @@
+2026-05-22 11:30:47,191 [INFO] [RELAY] init pins={1: 17, 2: 27, 3: 22, 4: 23} active_high=True real_gpio=True
+2026-05-22 11:30:49,436 [INFO] Model loaded. classes=['charger', 'cleaner', 'dryer', 'microwave', 'tv']
+2026-05-22 11:30:49,436 [INFO] Feature count: 20
+2026-05-22 11:30:49,475 [INFO] [MOBILE UI] serving on http://0.0.0.0:5000
+2026-05-22 11:30:53,375 [INFO] [INIT BASELINE] Irms=75.56, H1=30.55, Pabs=43158.53
+2026-05-22 11:30:53,376 [INFO] [STARTUP] Irms=75.56 높지만 H1=30.55 < 300.0 → 센서 idle 노이즈/오프셋으로 처리 (기기 등록 안 함).
+2026-05-22 11:31:13,728 [INFO] [EVENT-TRIG] cond2 ON d_irms=13.5, d_h1=216.0
+2026-05-22 11:31:13,921 [INFO] [ID-ON] RF_abs=tv(0.52)  RF_delta=tv(0.69)  delta_irms=13.5  delta_h1=216.0
+2026-05-22 11:31:13,923 [INFO] [ID-ON] probs_abs={'charger': 0.143, 'cleaner': 0.027, 'dryer': 0.307, 'microwave': 0.0, 'tv': 0.523}
+2026-05-22 11:31:13,924 [INFO] [ID-ON] probs_delta={'charger': 0.027, 'cleaner': 0.03, 'dryer': 0.253, 'microwave': 0.0, 'tv': 0.69}
+2026-05-22 11:31:13,924 [INFO] [ID-ON] H1 override: tv -> charger  (delta_h1=216.0, boundary=870.0)
+2026-05-22 11:31:13,925 [INFO] [DEVICE ON] Socket1 <- charger (219W, conf=0.69, method=rf+h1_correction, d_irms=13.5, d_h1=216.0, d_pabs=4324.6)
+2026-05-22 11:31:17,076 [INFO] [RECLASSIFY-1] 기존='charger'  RF(abs)=dryer(0.97)  Irms=781.1  H1=38074.7  probs={'charger': 0.0, 'cleaner': 0.007, 'dryer': 0.967, 'microwave': 0.027, 'tv': 0.0}
+2026-05-22 11:31:17,076 [INFO] [RECLASSIFY] 'charger' -> 'dryer' (conf=0.97)
+2026-05-22 11:31:20,685 [INFO] [OFF-REJECT] cond2 d_irms=-10.0, d_h1=-66.0 (임계 미달, transient 가능성)
+2026-05-22 11:31:21,027 [INFO] [OFF-REJECT] cond2 d_irms=-9.9, d_h1=-70.7 (임계 미달, transient 가능성)
+2026-05-22 11:31:21,335 [INFO] [OFF-REJECT] cond2 d_irms=-9.3, d_h1=-72.0 (임계 미달, transient 가능성)
+2026-05-22 11:31:21,336 [INFO] [NEAR-MISS] d_irms=-9.3, d_h1=-72.0, baseline_irms=780.2, baseline_h1=38074.1
+2026-05-22 11:31:21,647 [INFO] [OFF-REJECT] cond2 d_irms=-9.2, d_h1=-81.7 (임계 미달, transient 가능성)
+2026-05-22 11:31:21,954 [INFO] [OFF-REJECT] cond2 d_irms=-7.5, d_h1=-89.1 (임계 미달, transient 가능성)
+2026-05-22 11:31:22,261 [INFO] [OFF-REJECT] cond2 d_irms=-6.3, d_h1=-95.8 (임계 미달, transient 가능성)
+2026-05-22 11:31:22,571 [INFO] [NEAR-MISS] d_irms=-4.1, d_h1=-94.0, baseline_irms=779.9, baseline_h1=38070.7
+2026-05-22 11:31:23,191 [INFO] [OFF-REJECT] cond2 d_irms=-6.7, d_h1=-89.3 (임계 미달, transient 가능성)
+2026-05-22 11:31:23,497 [INFO] [OFF-REJECT] cond2 d_irms=-6.2, d_h1=-91.8 (임계 미달, transient 가능성)
+2026-05-22 11:31:23,805 [INFO] [EVENT-TRIG] cond2 OFF d_irms=-6.9, d_h1=-237.7
+2026-05-22 11:31:23,907 [INFO] [ID-OFF] removed_probs={'charger': 0.013, 'cleaner': 0.027, 'dryer': 0.203, 'microwave': 0.0, 'tv': 0.757}, active=['dryer'], removed=dryer(0.20)
+2026-05-22 11:31:23,908 [WARNING] [OFF SIG-MISMATCH] dryer sig_h1=38035, d_h1=238 (<30% of sig) - 부분 변동, OFF 무시
+2026-05-22 11:31:23,909 [WARNING] [OFF REJECT] dryer conf=0.00 < 0.05 - transient 가능성
+2026-05-22 11:31:27,581 [INFO] [NEAR-MISS] d_irms=-8.5, d_h1=15.8, baseline_irms=778.9, baseline_h1=38059.9
+2026-05-22 11:31:27,889 [INFO] [OFF-REJECT] cond2 d_irms=-10.9, d_h1=-138.7 (임계 미달, transient 가능성)
+2026-05-22 11:31:28,195 [INFO] [OFF-REJECT] cond2 d_irms=-8.8, d_h1=-135.4 (임계 미달, transient 가능성)
+2026-05-22 11:31:28,504 [INFO] [OFF-REJECT] cond2 d_irms=-9.9, d_h1=-143.3 (임계 미달, transient 가능성)
+2026-05-22 11:31:28,811 [INFO] [OFF-REJECT] cond2 d_irms=-9.2, d_h1=-82.1 (임계 미달, transient 가능성)
+2026-05-22 11:31:28,811 [INFO] [NEAR-MISS] d_irms=-9.2, d_h1=-82.1, baseline_irms=778.5, baseline_h1=38055.9
+2026-05-22 11:31:29,125 [INFO] [OFF-REJECT] cond2 d_irms=-10.4, d_h1=-120.6 (임계 미달, transient 가능성)
+2026-05-22 11:31:29,432 [INFO] [OFF-REJECT] cond2 d_irms=-11.0, d_h1=-121.6 (임계 미달, transient 가능성)
+2026-05-22 11:31:29,742 [INFO] [EVENT-TRIG] cond2 OFF d_irms=-8.3, d_h1=-239.9
+2026-05-22 11:31:29,843 [INFO] [ID-OFF] removed_probs={'charger': 0.01, 'cleaner': 0.027, 'dryer': 0.257, 'microwave': 0.0, 'tv': 0.707}, active=['dryer'], removed=dryer(0.26)
+2026-05-22 11:31:29,844 [WARNING] [OFF SIG-MISMATCH] dryer sig_h1=38035, d_h1=240 (<30% of sig) - 부분 변동, OFF 무시
+2026-05-22 11:31:29,844 [WARNING] [OFF REJECT] dryer conf=0.00 < 0.05 - transient 가능성
+2026-05-22 11:31:33,476 [INFO] [EVENT-TRIG] cond2 OFF d_irms=-236.4, d_h1=-11874.3
+2026-05-22 11:31:33,581 [INFO] [ID-OFF] removed_probs={'charger': 0.047, 'cleaner': 0.157, 'dryer': 0.71, 'microwave': 0.003, 'tv': 0.083}, active=['dryer'], removed=dryer(0.71)
+2026-05-22 11:31:33,581 [WARNING] [OFF SIG-MISMATCH] dryer sig_h1=38035, d_h1=11874 (<30% of sig) - 부분 변동, OFF 무시
+2026-05-22 11:31:33,582 [WARNING] [OFF REJECT] dryer conf=0.00 < 0.05 - transient 가능성
+2026-05-22 11:31:37,229 [INFO] [EVENT-TRIG] cond2 OFF d_irms=-333.4, d_h1=-16403.7
+2026-05-22 11:31:37,333 [INFO] [ID-OFF] removed_probs={'charger': 0.0, 'cleaner': 0.0, 'dryer': 0.98, 'microwave': 0.017, 'tv': 0.003}, active=['dryer'], removed=dryer(0.98)
+2026-05-22 11:31:37,334 [WARNING] [OFF SIG-MISMATCH] dryer sig_h1=38035, d_h1=16404 (<30% of sig) - 부분 변동, OFF 무시
+2026-05-22 11:31:37,334 [WARNING] [OFF REJECT] dryer conf=0.00 < 0.05 - transient 가능성
+2026-05-22 11:31:40,894 [INFO] [EVENT-TRIG] cond2 OFF d_irms=-607.8, d_h1=-32886.6
+2026-05-22 11:31:41,003 [INFO] [ID-OFF] removed_probs={'charger': 0.0, 'cleaner': 0.003, 'dryer': 0.963, 'microwave': 0.03, 'tv': 0.003}, active=['dryer'], removed=dryer(0.96)
+2026-05-22 11:31:41,004 [INFO] [DEVICE OFF] Socket1 (dryer) (conf=0.96, method=rf_removed_signal)
+2026-05-22 11:31:54,286 [INFO] [NEAR-MISS] d_irms=3.4, d_h1=20.5, baseline_irms=70.1, baseline_h1=36.7
+2026-05-22 11:31:55,497 [INFO] [NEAR-MISS] d_irms=3.2, d_h1=62.5, baseline_irms=70.2, baseline_h1=38.0
+2026-05-22 11:31:56,716 [INFO] [NEAR-MISS] d_irms=-0.9, d_h1=90.7, baseline_irms=70.3, baseline_h1=41.0
+2026-05-22 11:31:57,918 [INFO] [NEAR-MISS] d_irms=-1.0, d_h1=84.2, baseline_irms=70.3, baseline_h1=44.6
+2026-05-22 11:31:59,101 [INFO] [NEAR-MISS] d_irms=-0.8, d_h1=111.3, baseline_irms=70.3, baseline_h1=48.2
+2026-05-22 11:32:00,283 [INFO] [NEAR-MISS] d_irms=5.5, d_h1=489.3, baseline_irms=70.3, baseline_h1=58.8
+2026-05-22 11:32:00,593 [INFO] [EVENT-TRIG] cond2 ON d_irms=6.7, d_h1=567.2
+2026-05-22 11:32:00,848 [INFO] [ID-ON] RF_abs=tv(0.47)  RF_delta=tv(0.62)  delta_irms=6.7  delta_h1=567.2
+2026-05-22 11:32:00,848 [INFO] [ID-ON] probs_abs={'charger': 0.377, 'cleaner': 0.033, 'dryer': 0.12, 'microwave': 0.003, 'tv': 0.467}
+2026-05-22 11:32:00,849 [INFO] [ID-ON] probs_delta={'charger': 0.223, 'cleaner': 0.03, 'dryer': 0.127, 'microwave': 0.0, 'tv': 0.62}
+2026-05-22 11:32:00,849 [INFO] [ID-ON] H1 override: tv -> charger  (delta_h1=567.2, boundary=870.0)
+2026-05-22 11:32:00,850 [INFO] [DEVICE ON] Socket2 <- charger (54W, conf=0.62, method=rf+h1_correction, d_irms=6.7, d_h1=567.2, d_pabs=3084.5)
+2026-05-22 11:32:03,946 [INFO] [RECLASSIFY-1] 기존='charger'  RF(abs)=tv(0.43)  Irms=80.7  H1=933.6  probs={'charger': 0.417, 'cleaner': 0.013, 'dryer': 0.057, 'microwave': 0.08, 'tv': 0.433}
+2026-05-22 11:32:03,947 [INFO] [RECLASSIFY] H1 보정: tv -> charger
+2026-05-22 11:32:03,947 [INFO] [RECLASSIFY] 'charger' 재확인 완료 (conf=0.43)
+2026-05-22 11:32:05,452 [INFO] [NEAR-MISS] d_irms=1.0, d_h1=174.7, baseline_irms=77.5, baseline_h1=667.9
+2026-05-22 11:32:06,716 [INFO] [NEAR-MISS] d_irms=1.3, d_h1=193.6, baseline_irms=77.6, baseline_h1=674.8
+2026-05-22 11:32:07,928 [INFO] [NEAR-MISS] d_irms=3.6, d_h1=286.2, baseline_irms=77.7, baseline_h1=683.7
+2026-05-22 11:32:08,828 [INFO] [EVENT-TRIG] cond2 ON d_irms=6.2, d_h1=377.6
+2026-05-22 11:32:09,030 [INFO] [ID-ON] RF_abs=tv(0.38)  RF_delta=tv(0.67)  delta_irms=6.2  delta_h1=377.6
+2026-05-22 11:32:09,030 [INFO] [ID-ON] probs_abs={'charger': 0.323, 'cleaner': 0.15, 'dryer': 0.043, 'microwave': 0.1, 'tv': 0.383}
+2026-05-22 11:32:09,031 [INFO] [ID-ON] probs_delta={'charger': 0.247, 'cleaner': 0.003, 'dryer': 0.083, 'microwave': 0.0, 'tv': 0.667}
+2026-05-22 11:32:09,031 [INFO] [ID-ON] H1 override alternate: charger 이미 active → tv
+2026-05-22 11:32:09,032 [INFO] [DEVICE ON] Socket3 <- tv (7W, conf=0.67, method=rf+h1_correction, d_irms=6.2, d_h1=377.6, d_pabs=2968.8)
+2026-05-22 11:32:12,202 [INFO] [RECLASSIFY-N] 기존='tv'  RF(delta)=tv(0.65)  d_Irms=5.7  d_H1=482.4  probs={'charger': 0.247, 'cleaner': 0.0, 'dryer': 0.103, 'microwave': 0.0, 'tv': 0.65}
+2026-05-22 11:32:12,202 [INFO] [RECLASSIFY] H1 보정: tv -> charger
+2026-05-22 11:32:12,203 [INFO] [RECLASSIFY] 'charger' 이미 active. 재분류 취소.
+2026-05-22 11:32:13,129 [INFO] [NEAR-MISS] d_irms=-1.2, d_h1=43.9, baseline_irms=84.1, baseline_h1=1084.9
+2026-05-22 11:32:14,347 [INFO] [NEAR-MISS] d_irms=-1.2, d_h1=-44.3, baseline_irms=83.8, baseline_h1=1089.3
+2026-05-22 11:32:15,648 [INFO] [NEAR-MISS] d_irms=-2.8, d_h1=-172.8, baseline_irms=83.7, baseline_h1=1085.5
+2026-05-22 11:32:17,038 [INFO] [EVENT-TRIG] cond2 OFF d_irms=-6.3, d_h1=-308.3
+2026-05-22 11:32:17,160 [INFO] [ID-OFF] removed_probs={'charger': 0.197, 'cleaner': 0.0, 'dryer': 0.12, 'microwave': 0.0, 'tv': 0.683}, active=['charger', 'tv'], removed=tv(0.68)
+2026-05-22 11:32:17,161 [INFO] [DEVICE OFF] Socket3 (tv) (conf=0.68, method=rf_removed_signal)
+2026-05-22 11:32:20,932 [INFO] [NEAR-MISS] d_irms=1.0, d_h1=61.4, baseline_irms=77.1, baseline_h1=761.5
+2026-05-22 11:32:22,178 [INFO] [NEAR-MISS] d_irms=3.6, d_h1=200.7, baseline_irms=77.1, baseline_h1=766.4
+2026-05-22 11:32:23,399 [INFO] [NEAR-MISS] d_irms=2.8, d_h1=222.2, baseline_irms=77.3, baseline_h1=775.4
+2026-05-22 11:32:24,610 [INFO] [NEAR-MISS] d_irms=-0.0, d_h1=77.8, baseline_irms=77.4, baseline_h1=782.9
+2026-05-22 11:32:25,831 [INFO] [NEAR-MISS] d_irms=-1.8, d_h1=-42.0, baseline_irms=77.0, baseline_h1=783.3
+2026-05-22 11:32:27,101 [INFO] [NEAR-MISS] d_irms=0.2, d_h1=40.8, baseline_irms=76.7, baseline_h1=782.3
+2026-05-22 11:32:28,313 [INFO] [NEAR-MISS] d_irms=4.3, d_h1=244.8, baseline_irms=76.8, baseline_h1=787.3
+2026-05-22 11:32:29,544 [INFO] [NEAR-MISS] d_irms=3.3, d_h1=164.2, baseline_irms=77.0, baseline_h1=796.4
+2026-05-22 11:32:30,732 [INFO] [NEAR-MISS] d_irms=2.8, d_h1=127.9, baseline_irms=77.1, baseline_h1=802.5
+2026-05-22 11:32:32,006 [INFO] [NEAR-MISS] d_irms=3.9, d_h1=182.7, baseline_irms=77.2, baseline_h1=808.0
+2026-05-22 11:32:33,235 [INFO] [NEAR-MISS] d_irms=1.4, d_h1=47.6, baseline_irms=77.4, baseline_h1=814.7
+2026-05-22 11:32:34,442 [INFO] [NEAR-MISS] d_irms=-4.8, d_h1=-341.6, baseline_irms=77.3, baseline_h1=810.8
+2026-05-22 11:32:35,071 [INFO] [EVENT-TRIG] cond2 OFF d_irms=-6.6, d_h1=-505.9
+2026-05-22 11:32:35,174 [INFO] [ID-OFF] removed_probs={'charger': 0.247, 'cleaner': 0.0, 'dryer': 0.06, 'microwave': 0.0, 'tv': 0.693}, active=['charger'], removed=charger(0.25)
+2026-05-22 11:32:35,174 [INFO] [DEVICE OFF] Socket2 (charger) (conf=0.25, method=rf_removed_signal)
+2026-05-22 11:32:39,455 [INFO] [NEAR-MISS] d_irms=-0.2, d_h1=-23.9, baseline_irms=70.5, baseline_h1=282.8
+2026-05-22 11:32:41,908 [INFO] [NEAR-MISS] d_irms=-0.0, d_h1=-32.9, baseline_irms=70.4, baseline_h1=273.6
+2026-05-22 11:32:43,118 [INFO] [NEAR-MISS] d_irms=0.4, d_h1=-30.7, baseline_irms=70.4, baseline_h1=272.3
+2026-05-22 11:32:55,189 [INFO] [NEAR-MISS] d_irms=-0.1, d_h1=-75.1, baseline_irms=70.7, baseline_h1=255.0
+2026-05-22 11:32:56,394 [INFO] [NEAR-MISS] d_irms=-0.0, d_h1=-131.1, baseline_irms=70.7, baseline_h1=251.0
+2026-05-22 11:32:57,671 [INFO] [NEAR-MISS] d_irms=0.2, d_h1=-133.3, baseline_irms=70.7, baseline_h1=245.7
+2026-05-22 11:32:58,884 [INFO] [NEAR-MISS] d_irms=0.1, d_h1=-116.4, baseline_irms=70.7, baseline_h1=240.7
+2026-05-22 11:33:00,088 [INFO] [NEAR-MISS] d_irms=0.2, d_h1=-102.5, baseline_irms=70.7, baseline_h1=236.1
+2026-05-22 11:33:01,309 [INFO] [NEAR-MISS] d_irms=0.1, d_h1=-88.2, baseline_irms=70.7, baseline_h1=232.1
+2026-05-22 11:33:02,550 [INFO] [NEAR-MISS] d_irms=-0.1, d_h1=-85.2, baseline_irms=70.7, baseline_h1=228.6
+2026-05-22 11:33:03,754 [INFO] [NEAR-MISS] d_irms=-0.4, d_h1=-91.4, baseline_irms=70.7, baseline_h1=225.0
+2026-05-22 11:33:04,972 [INFO] [NEAR-MISS] d_irms=-0.4, d_h1=-92.4, baseline_irms=70.7, baseline_h1=221.4
+2026-05-22 11:33:06,177 [INFO] [NEAR-MISS] d_irms=-0.4, d_h1=-69.6, baseline_irms=70.6, baseline_h1=218.0
+2026-05-22 11:33:07,452 [INFO] [NEAR-MISS] d_irms=-0.6, d_h1=-74.3, baseline_irms=70.6, baseline_h1=215.1
+2026-05-22 11:33:08,657 [INFO] [NEAR-MISS] d_irms=-0.5, d_h1=-82.1, baseline_irms=70.6, baseline_h1=212.1
+2026-05-22 11:33:09,876 [INFO] [NEAR-MISS] d_irms=-0.6, d_h1=-82.8, baseline_irms=70.6, baseline_h1=208.7
+2026-05-22 11:33:11,091 [INFO] [NEAR-MISS] d_irms=-0.5, d_h1=-74.0, baseline_irms=70.6, baseline_h1=205.5
+2026-05-22 11:33:12,355 [INFO] [NEAR-MISS] d_irms=-0.6, d_h1=-78.1, baseline_irms=70.5, baseline_h1=202.4
+2026-05-22 11:33:13,581 [INFO] [NEAR-MISS] d_irms=-0.2, d_h1=-70.4, baseline_irms=70.5, baseline_h1=199.5
+2026-05-22 11:33:14,787 [INFO] [NEAR-MISS] d_irms=-0.4, d_h1=-63.3, baseline_irms=70.5, baseline_h1=196.7
+2026-05-22 11:33:15,992 [INFO] [NEAR-MISS] d_irms=-0.6, d_h1=-68.8, baseline_irms=70.5, baseline_h1=194.2
+2026-05-22 11:33:17,252 [INFO] [NEAR-MISS] d_irms=-0.6, d_h1=-63.1, baseline_irms=70.5, baseline_h1=191.4
+2026-05-22 11:33:18,466 [INFO] [NEAR-MISS] d_irms=-0.6, d_h1=-61.3, baseline_irms=70.4, baseline_h1=188.8
+2026-05-22 11:33:19,689 [INFO] [NEAR-MISS] d_irms=-0.4, d_h1=-41.2, baseline_irms=70.4, baseline_h1=186.7
+2026-05-22 11:33:20,902 [INFO] [NEAR-MISS] d_irms=-0.0, d_h1=-49.5, baseline_irms=70.4, baseline_h1=184.9
+2026-05-22 11:33:22,166 [INFO] [NEAR-MISS] d_irms=0.2, d_h1=-57.6, baseline_irms=70.4, baseline_h1=182.8
+2026-05-22 11:33:23,385 [INFO] [NEAR-MISS] d_irms=0.4, d_h1=-58.5, baseline_irms=70.4, baseline_h1=180.5
+2026-05-22 11:33:24,590 [INFO] [NEAR-MISS] d_irms=0.2, d_h1=-43.6, baseline_irms=70.4, baseline_h1=178.4
+2026-05-22 11:33:25,807 [INFO] [NEAR-MISS] d_irms=0.1, d_h1=-39.2, baseline_irms=70.4, baseline_h1=176.7
+2026-05-22 11:33:27,028 [INFO] [NEAR-MISS] d_irms=-0.0, d_h1=-41.3, baseline_irms=70.4, baseline_h1=175.0
+2026-05-22 11:33:28,261 [INFO] [NEAR-MISS] d_irms=0.1, d_h1=-43.1, baseline_irms=70.4, baseline_h1=173.3
+2026-05-22 11:33:29,481 [INFO] [NEAR-MISS] d_irms=0.2, d_h1=-35.2, baseline_irms=70.4, baseline_h1=171.6
+2026-05-22 11:33:29,783 [INFO] [EVENT-TRIG] cond2 ON d_irms=14.4, d_h1=894.5
+2026-05-22 11:33:29,982 [INFO] [ID-ON] RF_abs=tv(0.83)  RF_delta=tv(0.71)  delta_irms=14.4  delta_h1=894.5
+2026-05-22 11:33:29,983 [INFO] [ID-ON] probs_abs={'charger': 0.02, 'cleaner': 0.033, 'dryer': 0.12, 'microwave': 0.0, 'tv': 0.827}
+2026-05-22 11:33:29,984 [INFO] [ID-ON] probs_delta={'charger': 0.013, 'cleaner': 0.057, 'dryer': 0.22, 'microwave': 0.0, 'tv': 0.71}
+2026-05-22 11:33:29,984 [INFO] [DEVICE ON] Socket3 <- tv (426W, conf=0.83, method=rf+h1_correction, d_irms=14.4, d_h1=894.5, d_pabs=7389.1)
+2026-05-22 11:33:33,166 [INFO] [RECLASSIFY-1] 기존='tv'  RF(abs)=cleaner(0.99)  Irms=151.0  H1=6532.5  probs={'charger': 0.0, 'cleaner': 0.993, 'dryer': 0.007, 'microwave': 0.0, 'tv': 0.0}
+2026-05-22 11:33:33,167 [INFO] [RECLASSIFY] 'tv' -> 'cleaner' (conf=0.99)
+2026-05-22 11:33:37,107 [INFO] [NEAR-MISS] d_irms=0.7, d_h1=-47.2, baseline_irms=150.9, baseline_h1=6529.1
+2026-05-22 11:33:38,386 [INFO] [NEAR-MISS] d_irms=-1.8, d_h1=-88.8, baseline_irms=150.9, baseline_h1=6526.9
+2026-05-22 11:33:39,622 [INFO] [NEAR-MISS] d_irms=-3.4, d_h1=-72.7, baseline_irms=150.8, baseline_h1=6523.7
+2026-05-22 11:33:40,839 [INFO] [NEAR-MISS] d_irms=-3.9, d_h1=-84.8, baseline_irms=150.7, baseline_h1=6520.4
+2026-05-22 11:33:42,051 [INFO] [NEAR-MISS] d_irms=-4.2, d_h1=-123.6, baseline_irms=150.5, baseline_h1=6516.7
+2026-05-22 11:33:43,338 [INFO] [NEAR-MISS] d_irms=-2.4, d_h1=-155.2, baseline_irms=150.4, baseline_h1=6510.7
+2026-05-22 11:33:44,549 [INFO] [NEAR-MISS] d_irms=-3.9, d_h1=-159.0, baseline_irms=150.2, baseline_h1=6504.4
+2026-05-22 11:33:45,771 [INFO] [NEAR-MISS] d_irms=-2.2, d_h1=-68.8, baseline_irms=150.1, baseline_h1=6499.1
+2026-05-22 11:33:46,998 [INFO] [NEAR-MISS] d_irms=-3.3, d_h1=-80.3, baseline_irms=150.0, baseline_h1=6496.0
+2026-05-22 11:33:47,665 [INFO] [EVENT-TRIG] cond2 OFF d_irms=-9.9, d_h1=-700.7
+2026-05-22 11:33:47,769 [INFO] [ID-OFF] removed_probs={'charger': 0.0, 'cleaner': 0.0, 'dryer': 0.24, 'microwave': 0.0, 'tv': 0.76}, active=['cleaner'], removed=cleaner(0.00)
+2026-05-22 11:33:47,770 [WARNING] [OFF SIG-MISMATCH] cleaner sig_h1=6361, d_h1=701 (<30% of sig) - 부분 변동, OFF 무시
+2026-05-22 11:33:47,771 [WARNING] [OFF REJECT] cleaner conf=0.00 < 0.05 - transient 가능성
+2026-05-22 11:33:51,406 [INFO] [EVENT-TRIG] cond2 OFF d_irms=-73.9, d_h1=-5896.8
+2026-05-22 11:33:51,510 [INFO] [ID-OFF] removed_probs={'charger': 0.01, 'cleaner': 0.467, 'dryer': 0.14, 'microwave': 0.007, 'tv': 0.377}, active=['cleaner'], removed=cleaner(0.47)
+2026-05-22 11:33:51,511 [INFO] [DEVICE OFF] Socket3 (cleaner) (conf=0.47, method=rf_removed_signal)
+2026-05-22 11:34:15,569 [INFO] [EVENT-TRIG] cond2 ON d_irms=30.1, d_h1=1767.5
+2026-05-22 11:34:15,771 [INFO] [ID-ON] RF_abs=tv(0.39)  RF_delta=tv(0.72)  delta_irms=30.1  delta_h1=1767.5
+2026-05-22 11:34:15,771 [INFO] [ID-ON] probs_abs={'charger': 0.173, 'cleaner': 0.127, 'dryer': 0.3, 'microwave': 0.01, 'tv': 0.39}
+2026-05-22 11:34:15,772 [INFO] [ID-ON] probs_delta={'charger': 0.017, 'cleaner': 0.053, 'dryer': 0.213, 'microwave': 0.0, 'tv': 0.717}
+2026-05-22 11:34:15,772 [INFO] [DEVICE ON] Socket4 <- tv (819W, conf=0.72, method=rf+h1_correction, d_irms=30.1, d_h1=1767.5, d_pabs=15495.3)
+2026-05-22 11:34:19,014 [INFO] [RECLASSIFY-1] 기존='tv'  RF(abs)=cleaner(1.00)  Irms=150.6  H1=6426.8  probs={'charger': 0.0, 'cleaner': 0.997, 'dryer': 0.003, 'microwave': 0.0, 'tv': 0.0}
+2026-05-22 11:34:19,014 [INFO] [RECLASSIFY] 'tv' -> 'cleaner' (conf=1.00)
+2026-05-22 11:34:24,549 [INFO] [NEAR-MISS] d_irms=-0.1, d_h1=-48.5, baseline_irms=150.7, baseline_h1=6410.9
+2026-05-22 11:34:27,004 [INFO] [NEAR-MISS] d_irms=5.3, d_h1=256.9, baseline_irms=150.7, baseline_h1=6409.3
+2026-05-22 11:34:27,335 [INFO] [EVENT-TRIG] cond2 ON d_irms=7.1, d_h1=338.9
+2026-05-22 11:34:27,554 [INFO] [ID-ON] RF_abs=cleaner(0.90)  RF_delta=tv(0.65)  delta_irms=7.1  delta_h1=338.9
+2026-05-22 11:34:27,555 [INFO] [ID-ON] probs_abs={'charger': 0.047, 'cleaner': 0.9, 'dryer': 0.05, 'microwave': 0.003, 'tv': 0.0}
+2026-05-22 11:34:27,556 [INFO] [ID-ON] probs_delta={'charger': 0.2, 'cleaner': 0.03, 'dryer': 0.123, 'microwave': 0.0, 'tv': 0.647}
+2026-05-22 11:34:27,557 [INFO] [ON SKIP] cleaner already active
+2026-05-22 11:34:31,240 [INFO] [EVENT-TRIG] cond2 ON d_irms=17.1, d_h1=826.9
+2026-05-22 11:34:31,444 [INFO] [ID-ON] RF_abs=cleaner(0.68)  RF_delta=tv(0.65)  delta_irms=17.1  delta_h1=826.9
+2026-05-22 11:34:31,445 [INFO] [ID-ON] probs_abs={'charger': 0.053, 'cleaner': 0.683, 'dryer': 0.063, 'microwave': 0.2, 'tv': 0.0}
+2026-05-22 11:34:31,446 [INFO] [ID-ON] probs_delta={'charger': 0.22, 'cleaner': 0.01, 'dryer': 0.117, 'microwave': 0.003, 'tv': 0.65}
+2026-05-22 11:34:31,446 [INFO] [ON SKIP] cleaner already active
+2026-05-22 11:34:35,162 [INFO] [EVENT-TRIG] cond2 ON d_irms=15.9, d_h1=699.9
+2026-05-22 11:34:35,352 [INFO] [ID-ON] RF_abs=cleaner(0.68)  RF_delta=tv(0.63)  delta_irms=15.9  delta_h1=699.9
+2026-05-22 11:34:35,353 [INFO] [ID-ON] probs_abs={'charger': 0.053, 'cleaner': 0.683, 'dryer': 0.087, 'microwave': 0.177, 'tv': 0.0}
+2026-05-22 11:34:35,353 [INFO] [ID-ON] probs_delta={'charger': 0.23, 'cleaner': 0.02, 'dryer': 0.12, 'microwave': 0.0, 'tv': 0.63}
+2026-05-22 11:34:35,354 [INFO] [ON SKIP] cleaner already active
+2026-05-22 11:34:39,097 [INFO] [EVENT-TRIG] cond2 ON d_irms=15.7, d_h1=725.6
+2026-05-22 11:34:39,295 [INFO] [ID-ON] RF_abs=cleaner(0.68)  RF_delta=tv(0.64)  delta_irms=15.7  delta_h1=725.6
+2026-05-22 11:34:39,296 [INFO] [ID-ON] probs_abs={'charger': 0.05, 'cleaner': 0.677, 'dryer': 0.057, 'microwave': 0.217, 'tv': 0.0}
+2026-05-22 11:34:39,297 [INFO] [ID-ON] probs_delta={'charger': 0.23, 'cleaner': 0.007, 'dryer': 0.117, 'microwave': 0.003, 'tv': 0.643}
+2026-05-22 11:34:39,298 [INFO] [ON SKIP] cleaner already active
+2026-05-22 11:34:43,005 [INFO] [EVENT-TRIG] cond2 ON d_irms=14.8, d_h1=691.4
+2026-05-22 11:34:43,198 [INFO] [ID-ON] RF_abs=cleaner(0.68)  RF_delta=tv(0.66)  delta_irms=14.8  delta_h1=691.4
+2026-05-22 11:34:43,199 [INFO] [ID-ON] probs_abs={'charger': 0.07, 'cleaner': 0.683, 'dryer': 0.047, 'microwave': 0.2, 'tv': 0.0}
+2026-05-22 11:34:43,200 [INFO] [ID-ON] probs_delta={'charger': 0.25, 'cleaner': 0.0, 'dryer': 0.093, 'microwave': 0.0, 'tv': 0.657}
+2026-05-22 11:34:43,200 [INFO] [ON SKIP] cleaner already active
+2026-05-22 11:34:46,978 [INFO] [EVENT-TRIG] cond2 ON d_irms=7.7, d_h1=453.8
+2026-05-22 11:34:47,165 [INFO] [ID-ON] RF_abs=cleaner(0.69)  RF_delta=tv(0.64)  delta_irms=7.7  delta_h1=453.8
+2026-05-22 11:34:47,165 [INFO] [ID-ON] probs_abs={'charger': 0.06, 'cleaner': 0.69, 'dryer': 0.057, 'microwave': 0.193, 'tv': 0.0}
+2026-05-22 11:34:47,166 [INFO] [ID-ON] probs_delta={'charger': 0.233, 'cleaner': 0.007, 'dryer': 0.12, 'microwave': 0.0, 'tv': 0.64}
+2026-05-22 11:34:47,166 [INFO] [ON SKIP] cleaner already active
+2026-05-22 11:34:50,885 [INFO] [EVENT-TRIG] cond2 ON d_irms=9.9, d_h1=399.6
+2026-05-22 11:34:51,079 [INFO] [ID-ON] RF_abs=cleaner(0.68)  RF_delta=tv(0.65)  delta_irms=9.9  delta_h1=399.6
+2026-05-22 11:34:51,080 [INFO] [ID-ON] probs_abs={'charger': 0.067, 'cleaner': 0.68, 'dryer': 0.053, 'microwave': 0.2, 'tv': 0.0}
+2026-05-22 11:34:51,080 [INFO] [ID-ON] probs_delta={'charger': 0.253, 'cleaner': 0.0, 'dryer': 0.093, 'microwave': 0.0, 'tv': 0.653}
+2026-05-22 11:34:51,080 [INFO] [ON SKIP] cleaner already active
+2026-05-22 11:34:54,813 [INFO] [EVENT-TRIG] cond2 OFF d_irms=-77.7, d_h1=-5620.0
+2026-05-22 11:34:54,919 [INFO] [ID-OFF] removed_probs={'charger': 0.003, 'cleaner': 0.193, 'dryer': 0.273, 'microwave': 0.0, 'tv': 0.53}, active=['cleaner'], removed=cleaner(0.19)
+2026-05-22 11:34:54,920 [INFO] [DEVICE OFF] Socket4 (cleaner) (conf=0.19, method=rf_removed_signal)
+2026-05-22 11:35:01,962 [INFO] [NEAR-MISS] d_irms=-0.0, d_h1=-24.0, baseline_irms=79.8, baseline_h1=955.8
+2026-05-22 11:35:03,202 [INFO] [NEAR-MISS] d_irms=0.2, d_h1=-35.1, baseline_irms=79.8, baseline_h1=953.7
+2026-05-22 11:35:04,460 [INFO] [NEAR-MISS] d_irms=-0.5, d_h1=-79.3, baseline_irms=79.8, baseline_h1=951.6
+2026-05-22 11:35:05,713 [INFO] [NEAR-MISS] d_irms=-0.4, d_h1=-62.8, baseline_irms=79.8, baseline_h1=948.5
+2026-05-22 11:35:06,954 [INFO] [NEAR-MISS] d_irms=-1.5, d_h1=-97.2, baseline_irms=79.7, baseline_h1=945.5
+2026-05-22 11:35:08,173 [INFO] [NEAR-MISS] d_irms=-2.0, d_h1=-60.4, baseline_irms=79.7, baseline_h1=942.0
+2026-05-22 11:35:09,446 [INFO] [NEAR-MISS] d_irms=-2.4, d_h1=-50.0, baseline_irms=79.6, baseline_h1=939.6
+2026-05-22 11:35:10,667 [INFO] [NEAR-MISS] d_irms=-2.6, d_h1=-68.0, baseline_irms=79.5, baseline_h1=937.0
+2026-05-22 11:35:11,902 [INFO] [NEAR-MISS] d_irms=-3.4, d_h1=-95.0, baseline_irms=79.3, baseline_h1=933.0
+2026-05-22 11:35:13,128 [INFO] [NEAR-MISS] d_irms=-3.3, d_h1=-66.1, baseline_irms=79.2, baseline_h1=928.9
+2026-05-22 11:35:14,405 [INFO] [NEAR-MISS] d_irms=-1.5, d_h1=-29.5, baseline_irms=79.1, baseline_h1=926.4
+2026-05-22 11:35:15,642 [INFO] [NEAR-MISS] d_irms=-1.2, d_h1=-55.3, baseline_irms=79.0, baseline_h1=924.8
+2026-05-22 11:35:16,863 [INFO] [NEAR-MISS] d_irms=-1.3, d_h1=-76.9, baseline_irms=79.0, baseline_h1=922.4
+2026-05-22 11:35:18,081 [INFO] [NEAR-MISS] d_irms=-2.5, d_h1=-84.8, baseline_irms=78.9, baseline_h1=919.1
+2026-05-22 11:35:19,381 [INFO] [NEAR-MISS] d_irms=-3.4, d_h1=-58.6, baseline_irms=78.8, baseline_h1=916.3
+2026-05-22 11:35:20,603 [INFO] [NEAR-MISS] d_irms=-2.6, d_h1=-46.0, baseline_irms=78.7, baseline_h1=914.3
+2026-05-22 11:35:21,840 [INFO] [NEAR-MISS] d_irms=-1.3, d_h1=-27.6, baseline_irms=78.6, baseline_h1=912.4
+2026-05-22 11:35:23,077 [INFO] [NEAR-MISS] d_irms=-0.4, d_h1=-44.8, baseline_irms=78.5, baseline_h1=910.3
+2026-05-22 11:35:26,768 [INFO] [NEAR-MISS] d_irms=-1.9, d_h1=-83.0, baseline_irms=78.2, baseline_h1=901.9
+2026-05-22 11:35:28,054 [INFO] [NEAR-MISS] d_irms=-1.1, d_h1=-49.6, baseline_irms=78.2, baseline_h1=899.1
+2026-05-22 11:35:29,592 [INFO] [RELAY] socket1 pin=17 -> OFF
+2026-05-22 11:35:29,593 [INFO] [RELAY] socket2 pin=27 -> OFF
+2026-05-22 11:35:29,594 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-05-22 11:35:29,594 [INFO] [RELAY] socket4 pin=23 -> OFF
+2026-05-22 11:35:29,595 [INFO] [RELAY] closed (all OFF, GPIO cleanup)

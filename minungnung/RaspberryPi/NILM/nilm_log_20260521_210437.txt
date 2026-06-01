@@ -1,0 +1,12 @@
+2026-05-21 21:04:38,097 [INFO] [RELAY] init pins={1: 17, 2: 27, 3: 22, 4: 23} active_high=True real_gpio=True
+2026-05-21 21:04:38,177 [INFO] [MOBILE UI] serving on http://0.0.0.0:5000
+2026-05-21 21:04:40,464 [INFO] Model loaded. classes=['charger', 'cleaner', 'dryer', 'microwave', 'tv']
+2026-05-21 21:04:40,465 [INFO] Feature count: 20
+2026-05-21 21:04:40,465 [INFO] Model dir: /home/wattsup/Project/kwon/Model
+2026-05-21 21:04:44,324 [INFO] [INIT BASELINE] Irms=57.57, H1=37.35
+2026-05-21 21:04:44,325 [INFO] [STARTUP] Irms=57.57 높지만 H1=37.35 < 300.0 → 센서 idle 오프셋으로 처리.
+2026-05-21 21:04:48,162 [INFO] [RELAY] socket1 pin=17 -> OFF
+2026-05-21 21:04:48,163 [INFO] [RELAY] socket2 pin=27 -> OFF
+2026-05-21 21:04:48,163 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-05-21 21:04:48,164 [INFO] [RELAY] socket4 pin=23 -> OFF
+2026-05-21 21:04:48,165 [INFO] [RELAY] closed (all OFF, GPIO cleanup)

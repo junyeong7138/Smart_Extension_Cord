@@ -1,0 +1,151 @@
+2026-05-21 19:41:32,793 [INFO] [RELAY] init pins={1: 17, 2: 27, 3: 22, 4: 23} active_high=True real_gpio=True
+2026-05-21 19:41:32,850 [INFO] [MOBILE UI] serving on http://0.0.0.0:5000
+2026-05-21 19:41:34,977 [INFO] Model loaded. classes=['charger', 'cleaner', 'dryer', 'microwave', 'tv']
+2026-05-21 19:41:34,978 [INFO] Feature count: 20
+2026-05-21 19:41:34,978 [INFO] Model dir: /home/wattsup/Project/kwon/Model
+2026-05-21 19:41:38,693 [INFO] [INIT BASELINE] Irms=76.61, H1=24.22
+2026-05-21 19:41:38,694 [INFO] [STARTUP] Irms=76.61 높지만 H1=24.22 < 300.0 → 센서 idle 오프셋으로 처리.
+2026-05-21 19:41:48,584 [INFO] [NEAR-MISS] d_irms=-0.1, d_h1=28.2, baseline_irms=76.2, baseline_h1=37.7
+2026-05-21 19:41:49,766 [INFO] [NEAR-MISS] d_irms=-0.2, d_h1=50.8, baseline_irms=76.2, baseline_h1=38.5
+2026-05-21 19:41:51,106 [INFO] [NEAR-MISS] d_irms=-0.2, d_h1=99.6, baseline_irms=76.2, baseline_h1=40.2
+2026-05-21 19:41:52,269 [INFO] [NEAR-MISS] d_irms=2.3, d_h1=387.8, baseline_irms=76.3, baseline_h1=45.8
+2026-05-21 19:41:53,432 [INFO] [NEAR-MISS] d_irms=2.9, d_h1=476.3, baseline_irms=76.3, baseline_h1=55.9
+2026-05-21 19:41:54,598 [INFO] [NEAR-MISS] d_irms=3.8, d_h1=569.1, baseline_irms=76.4, baseline_h1=68.4
+2026-05-21 19:41:55,890 [INFO] [NEAR-MISS] d_irms=5.0, d_h1=698.9, baseline_irms=76.5, baseline_h1=83.0
+2026-05-21 19:41:56,489 [INFO] [EVENT-TRIG] cond2 ON d_irms=7.3, d_h1=840.1
+2026-05-21 19:41:56,490 [INFO] [PENDING ON] start frame=70, wait=8, pre_I=76.6, pre_H1=91.7
+2026-05-21 19:41:58,941 [INFO] [ID-STABLE] chosen=dryer conf=0.96 method=range_high_power_guard details={'abs': 'tv:0.38', 'delta': 'tv:0.56', 'range': 'dryer:0.10', 'dI': 10.0, 'dH1': 942.0, 'dPabs': 4731.3}
+2026-05-21 19:41:58,943 [INFO] [ID-STABLE] probs_abs={'charger': 0.333, 'cleaner': 0.143, 'dryer': 0.04, 'microwave': 0.1, 'tv': 0.383}
+2026-05-21 19:41:58,943 [INFO] [ID-STABLE] probs_delta={'charger': 0.24, 'cleaner': 0.02, 'dryer': 0.093, 'microwave': 0.087, 'tv': 0.56}
+2026-05-21 19:41:58,944 [INFO] [ID-STABLE] range_scores={'charger': 3.495, 'cleaner': 4.334, 'dryer': 0.103, 'microwave': 4.046, 'tv': 2.484}
+2026-05-21 19:41:58,945 [INFO] [DEVICE ON] Socket1 <- dryer (1800W, conf=0.96, method=range_high_power_guard, d_irms=10.0, d_h1=942.0, d_pabs=4731.3, details={'abs': 'tv:0.38', 'delta': 'tv:0.56', 'range': 'dryer:0.10', 'dI': 10.0, 'dH1': 942.0, 'dPabs': 4731.3})
+2026-05-21 19:42:00,828 [INFO] [NEAR-MISS] d_irms=0.1, d_h1=25.7, baseline_irms=98.4, baseline_h1=1110.8
+2026-05-21 19:42:02,009 [INFO] [NEAR-MISS] d_irms=-2.5, d_h1=-48.6, baseline_irms=98.3, baseline_h1=1111.1
+2026-05-21 19:42:02,329 [INFO] [EVENT-TRIG] cond2 OFF d_irms=-15.2, d_h1=-98.7
+2026-05-21 19:42:02,329 [WARNING] [OFF REJECT] no matching active signature drop={'delta_irms': 15.197283169482404, 'delta_h1': 98.68240386883463, 'delta_pabs': 3670.593820760274}
+2026-05-21 19:42:04,356 [INFO] [NEAR-MISS] d_irms=4.5, d_h1=355.4, baseline_irms=87.7, baseline_h1=1460.4
+2026-05-21 19:42:04,669 [INFO] [EVENT-TRIG] cond2 ON d_irms=6.3, d_h1=497.2
+2026-05-21 19:42:04,670 [INFO] [PENDING ON] start frame=97, wait=8, pre_I=87.7, pre_H1=1462.6
+2026-05-21 19:42:07,290 [INFO] [ID-STABLE] chosen=dryer conf=0.96 method=range_high_power_guard details={'abs': 'cleaner:0.36', 'delta': 'tv:0.77', 'range': 'dryer:0.10', 'dI': 10.3, 'dH1': 1028.1, 'dPabs': 4214.3}
+2026-05-21 19:42:07,291 [INFO] [ID-STABLE] probs_abs={'charger': 0.287, 'cleaner': 0.363, 'dryer': 0.06, 'microwave': 0.17, 'tv': 0.12}
+2026-05-21 19:42:07,292 [INFO] [ID-STABLE] probs_delta={'charger': 0.0, 'cleaner': 0.0, 'dryer': 0.233, 'microwave': 0.0, 'tv': 0.767}
+2026-05-21 19:42:07,293 [INFO] [ID-STABLE] range_scores={'charger': 3.816, 'cleaner': 4.306, 'dryer': 0.103, 'microwave': 4.039, 'tv': 2.388}
+2026-05-21 19:42:07,294 [INFO] [ON SKIP] dryer already active and no reliable alternate
+2026-05-21 19:42:09,327 [INFO] [NEAR-MISS] d_irms=-1.5, d_h1=-64.8, baseline_irms=95.8, baseline_h1=2311.1
+2026-05-21 19:42:10,562 [INFO] [NEAR-MISS] d_irms=-2.7, d_h1=-167.3, baseline_irms=95.7, baseline_h1=2309.0
+2026-05-21 19:42:11,793 [INFO] [NEAR-MISS] d_irms=-2.3, d_h1=-93.9, baseline_irms=95.7, baseline_h1=2305.1
+2026-05-21 19:42:12,973 [INFO] [NEAR-MISS] d_irms=-3.3, d_h1=-181.7, baseline_irms=95.6, baseline_h1=2302.5
+2026-05-21 19:42:14,159 [INFO] [NEAR-MISS] d_irms=-0.5, d_h1=-82.5, baseline_irms=95.5, baseline_h1=2298.8
+2026-05-21 19:42:14,481 [INFO] [EVENT-TRIG] cond2 ON d_irms=17.5, d_h1=874.6
+2026-05-21 19:42:14,482 [INFO] [PENDING ON] start frame=129, wait=8, pre_I=95.5, pre_H1=2298.3
+2026-05-21 19:42:17,100 [INFO] [ID-STABLE] chosen=dryer conf=1.00 method=range_high_power_guard details={'abs': 'cleaner:0.66', 'delta': 'cleaner:0.48', 'range': 'dryer:0.01', 'dI': 98.9, 'dH1': 5972.0, 'dPabs': 52822.9}
+2026-05-21 19:42:17,101 [INFO] [ID-STABLE] probs_abs={'charger': 0.04, 'cleaner': 0.657, 'dryer': 0.067, 'microwave': 0.233, 'tv': 0.003}
+2026-05-21 19:42:17,102 [INFO] [ID-STABLE] probs_delta={'charger': 0.09, 'cleaner': 0.483, 'dryer': 0.2, 'microwave': 0.01, 'tv': 0.217}
+2026-05-21 19:42:17,102 [INFO] [ID-STABLE] range_scores={'charger': 21.366, 'cleaner': 0.988, 'dryer': 0.012, 'microwave': 3.11, 'tv': 6.869}
+2026-05-21 19:42:17,103 [INFO] [ON MODE UPDATE] dryer already active, treat as mode/power update
+2026-05-21 19:42:19,142 [INFO] [NEAR-MISS] d_irms=-1.5, d_h1=-34.2, baseline_irms=194.9, baseline_h1=8488.2
+2026-05-21 19:42:20,327 [INFO] [NEAR-MISS] d_irms=-4.4, d_h1=-139.5, baseline_irms=194.9, baseline_h1=8486.2
+2026-05-21 19:42:21,621 [INFO] [NEAR-MISS] d_irms=-3.8, d_h1=-158.3, baseline_irms=194.8, baseline_h1=8482.5
+2026-05-21 19:42:22,802 [INFO] [NEAR-MISS] d_irms=0.3, d_h1=-55.0, baseline_irms=194.7, baseline_h1=8479.3
+2026-05-21 19:42:23,121 [INFO] [EVENT-TRIG] cond2 OFF d_irms=-9.3, d_h1=-656.1
+2026-05-21 19:42:23,122 [INFO] [DEVICE OFF] Socket1 (dryer) by signature score=0.00, drop_I=9.3, drop_H1=656.1, drop_Pabs=5872.9
+2026-05-21 19:42:24,875 [INFO] [EVENT-TRIG] cond2 OFF d_irms=-11.4, d_h1=-632.5
+2026-05-21 19:42:24,876 [WARNING] [OFF SKIP] no active devices d_irms=-11.4, d_h1=-632.5
+2026-05-21 19:42:27,614 [INFO] [NEAR-MISS] d_irms=1.9, d_h1=57.8, baseline_irms=90.1, baseline_h1=2099.6
+2026-05-21 19:42:28,795 [INFO] [NEAR-MISS] d_irms=4.7, d_h1=113.4, baseline_irms=90.1, baseline_h1=2101.7
+2026-05-21 19:42:29,974 [INFO] [NEAR-MISS] d_irms=3.8, d_h1=121.7, baseline_irms=90.3, baseline_h1=2104.2
+2026-05-21 19:42:31,260 [INFO] [NEAR-MISS] d_irms=-1.3, d_h1=42.6, baseline_irms=90.3, baseline_h1=2106.4
+2026-05-21 19:42:32,450 [INFO] [NEAR-MISS] d_irms=-0.7, d_h1=82.0, baseline_irms=90.3, baseline_h1=2108.1
+2026-05-21 19:42:33,632 [INFO] [NEAR-MISS] d_irms=2.0, d_h1=71.9, baseline_irms=90.3, baseline_h1=2109.9
+2026-05-21 19:42:34,811 [INFO] [NEAR-MISS] d_irms=4.2, d_h1=69.8, baseline_irms=90.4, baseline_h1=2111.9
+2026-05-21 19:42:35,987 [INFO] [NEAR-MISS] d_irms=4.7, d_h1=82.7, baseline_irms=90.5, baseline_h1=2113.7
+2026-05-21 19:42:36,420 [INFO] [EVENT-TRIG] cond2 ON d_irms=79.0, d_h1=3851.1
+2026-05-21 19:42:36,421 [INFO] [PENDING ON] start frame=201, wait=8, pre_I=90.5, pre_H1=2114.2
+2026-05-21 19:42:39,027 [INFO] [ID-STABLE] chosen=dryer conf=0.96 method=range_high_power_guard details={'abs': 'dryer:0.50', 'delta': 'dryer:0.96', 'range': 'dryer:0.26', 'dI': 656.6, 'dH1': 34419.2, 'dPabs': 365113.8}
+2026-05-21 19:42:39,028 [INFO] [ID-STABLE] probs_abs={'charger': 0.0, 'cleaner': 0.197, 'dryer': 0.497, 'microwave': 0.307, 'tv': 0.0}
+2026-05-21 19:42:39,029 [INFO] [ID-STABLE] probs_delta={'charger': 0.007, 'cleaner': 0.0, 'dryer': 0.96, 'microwave': 0.03, 'tv': 0.003}
+2026-05-21 19:42:39,030 [INFO] [ID-STABLE] range_scores={'charger': 149.005, 'cleaner': 18.866, 'dryer': 0.258, 'microwave': 1.919, 'tv': 66.431}
+2026-05-21 19:42:39,030 [INFO] [DEVICE ON] Socket2 <- dryer (1800W, conf=0.96, method=range_high_power_guard, d_irms=656.6, d_h1=34419.2, d_pabs=365113.8, details={'abs': 'dryer:0.50', 'delta': 'dryer:0.96', 'range': 'dryer:0.26', 'dI': 656.6, 'dH1': 34419.2, 'dPabs': 365113.8})
+2026-05-21 19:42:41,199 [INFO] [NEAR-MISS] d_irms=-2.3, d_h1=-89.1, baseline_irms=813.6, baseline_h1=39960.1
+2026-05-21 19:42:42,526 [INFO] [NEAR-MISS] d_irms=4.4, d_h1=-340.1, baseline_irms=813.6, baseline_h1=39954.5
+2026-05-21 19:42:43,724 [INFO] [NEAR-MISS] d_irms=-1.0, d_h1=-461.9, baseline_irms=813.6, baseline_h1=39943.5
+2026-05-21 19:42:44,632 [INFO] [EVENT-TRIG] cond2 OFF d_irms=-15.2, d_h1=-979.9
+2026-05-21 19:42:44,633 [WARNING] [OFF REJECT] no matching active signature drop={'delta_irms': 15.218372885279678, 'delta_h1': 979.8544935816099, 'delta_pabs': 4101.423171095434}
+2026-05-21 19:42:46,433 [INFO] [EVENT-TRIG] cond2 OFF d_irms=-72.2, d_h1=-3791.3
+2026-05-21 19:42:46,435 [WARNING] [OFF REJECT] no matching active signature drop={'delta_irms': 72.19578007710476, 'delta_h1': 3791.2990718347573, 'delta_pabs': 41231.31736666671}
+2026-05-21 19:42:48,598 [INFO] [NEAR-MISS] d_irms=-0.7, d_h1=-33.8, baseline_irms=95.2, baseline_h1=2281.7
+2026-05-21 19:42:50,946 [INFO] [NEAR-MISS] d_irms=-2.0, d_h1=-73.3, baseline_irms=94.5, baseline_h1=2273.4
+2026-05-21 19:42:52,322 [INFO] [NEAR-MISS] d_irms=-0.7, d_h1=-29.7, baseline_irms=94.5, baseline_h1=2271.6
+2026-05-21 19:42:53,514 [INFO] [NEAR-MISS] d_irms=-1.7, d_h1=-127.0, baseline_irms=94.4, baseline_h1=2269.9
+2026-05-21 19:42:54,990 [INFO] [EVENT-TRIG] cond2 ON d_irms=33.3, d_h1=1573.1
+2026-05-21 19:42:54,991 [INFO] [PENDING ON] start frame=261, wait=8, pre_I=95.0, pre_H1=2268.9
+2026-05-21 19:42:57,601 [INFO] [ID-STABLE] chosen=dryer conf=0.81 method=range_high_power_guard details={'abs': 'microwave:0.76', 'delta': 'microwave:0.61', 'range': 'dryer:0.54', 'dI': 329.2, 'dH1': 15572.5, 'dPabs': 575535.6}
+2026-05-21 19:42:57,601 [INFO] [ID-STABLE] probs_abs={'charger': 0.003, 'cleaner': 0.05, 'dryer': 0.187, 'microwave': 0.76, 'tv': 0.0}
+2026-05-21 19:42:57,602 [INFO] [ID-STABLE] probs_delta={'charger': 0.0, 'cleaner': 0.077, 'dryer': 0.31, 'microwave': 0.613, 'tv': 0.0}
+2026-05-21 19:42:57,602 [INFO] [ID-STABLE] range_scores={'charger': 96.989, 'cleaner': 11.362, 'dryer': 0.535, 'microwave': 2.225, 'tv': 43.471}
+2026-05-21 19:42:57,603 [INFO] [ON MODE UPDATE] dryer already active, treat as mode/power update
+2026-05-21 19:42:59,377 [INFO] [EVENT-TRIG] cond2 ON d_irms=13.0, d_h1=785.8
+2026-05-21 19:42:59,377 [INFO] [PENDING ON] start frame=275, wait=8, pre_I=525.5, pre_H1=23317.9
+2026-05-21 19:43:02,064 [INFO] [ID-STABLE] chosen=dryer conf=0.98 method=range_high_power_guard details={'abs': 'microwave:0.94', 'delta': 'dryer:0.48', 'range': 'dryer:0.05', 'dI': 35.3, 'dH1': 2426.8, 'dPabs': 95311.9}
+2026-05-21 19:43:02,066 [INFO] [ID-STABLE] probs_abs={'charger': 0.0, 'cleaner': 0.0, 'dryer': 0.057, 'microwave': 0.943, 'tv': 0.0}
+2026-05-21 19:43:02,067 [INFO] [ID-STABLE] probs_delta={'charger': 0.203, 'cleaner': 0.15, 'dryer': 0.48, 'microwave': 0.0, 'tv': 0.167}
+2026-05-21 19:43:02,069 [INFO] [ID-STABLE] range_scores={'charger': 13.859, 'cleaner': 2.864, 'dryer': 0.054, 'microwave': 3.513, 'tv': 4.542}
+2026-05-21 19:43:02,071 [INFO] [ON MODE UPDATE] dryer already active, treat as mode/power update
+2026-05-21 19:43:03,873 [INFO] [EVENT-TRIG] cond2 OFF d_irms=-43.0, d_h1=-2352.1
+2026-05-21 19:43:03,874 [WARNING] [OFF REJECT] no matching active signature drop={'delta_irms': 42.98452577165892, 'delta_h1': 2352.1232753882614, 'delta_pabs': 77745.36350666662}
+2026-05-21 19:43:05,625 [INFO] [EVENT-TRIG] cond2 OFF d_irms=-44.7, d_h1=-2346.4
+2026-05-21 19:43:05,626 [WARNING] [OFF REJECT] no matching active signature drop={'delta_irms': 44.68928886881281, 'delta_h1': 2346.363264112657, 'delta_pabs': 96692.37613333337}
+2026-05-21 19:43:08,369 [INFO] [NEAR-MISS] d_irms=7.5, d_h1=-5.1, baseline_irms=112.3, baseline_h1=2339.1
+2026-05-21 19:43:08,985 [INFO] [OFF-REJECT] cond2 d_irms=15.0, d_h1=-59.5 (transient 가능성)
+2026-05-21 19:43:08,986 [INFO] [EVENT-TRIG] cond3 ON d_irms=15.0, d_h1=-59.5
+2026-05-21 19:43:08,986 [INFO] [PENDING ON] start frame=306, wait=8, pre_I=112.4, pre_H1=2338.9
+2026-05-21 19:43:11,534 [INFO] [ID-STABLE] chosen=dryer conf=0.96 method=range_high_power_guard details={'abs': 'cleaner:0.35', 'delta': 'tv:0.70', 'range': 'dryer:0.11', 'dI': -7.5, 'dH1': -192.8, 'dPabs': -23309.1}
+2026-05-21 19:43:11,535 [INFO] [ID-STABLE] probs_abs={'charger': 0.313, 'cleaner': 0.347, 'dryer': 0.053, 'microwave': 0.173, 'tv': 0.113}
+2026-05-21 19:43:11,535 [INFO] [ID-STABLE] probs_delta={'charger': 0.0, 'cleaner': 0.01, 'dryer': 0.293, 'microwave': 0.0, 'tv': 0.697}
+2026-05-21 19:43:11,536 [INFO] [ID-STABLE] range_scores={'charger': 4.473, 'cleaner': 4.686, 'dryer': 0.111, 'microwave': 4.149, 'tv': 3.638}
+2026-05-21 19:43:11,537 [INFO] [ON MODE UPDATE] dryer already active, treat as mode/power update
+2026-05-21 19:43:14,584 [INFO] [NEAR-MISS] d_irms=7.5, d_h1=-1.4, baseline_irms=88.9, baseline_h1=2212.4
+2026-05-21 19:43:15,201 [INFO] [EVENT-TRIG] cond2 ON d_irms=12.1, d_h1=40.2
+2026-05-21 19:43:15,202 [INFO] [PENDING ON] start frame=326, wait=8, pre_I=89.1, pre_H1=2212.6
+2026-05-21 19:43:17,819 [INFO] [ID-STABLE] chosen=dryer conf=0.97 method=range_high_power_guard details={'abs': 'cleaner:0.33', 'delta': 'tv:0.43', 'range': 'dryer:0.10', 'dI': 14.0, 'dH1': 15.2, 'dPabs': 61424.6}
+2026-05-21 19:43:17,820 [INFO] [ID-STABLE] probs_abs={'charger': 0.08, 'cleaner': 0.33, 'dryer': 0.317, 'microwave': 0.263, 'tv': 0.01}
+2026-05-21 19:43:17,821 [INFO] [ID-STABLE] probs_delta={'charger': 0.117, 'cleaner': 0.043, 'dryer': 0.407, 'microwave': 0.0, 'tv': 0.433}
+2026-05-21 19:43:17,821 [INFO] [ID-STABLE] range_scores={'charger': 6.349, 'cleaner': 3.898, 'dryer': 0.097, 'microwave': 3.927, 'tv': 4.22}
+2026-05-21 19:43:17,821 [INFO] [ON MODE UPDATE] dryer already active, treat as mode/power update
+2026-05-21 19:43:20,757 [INFO] [NEAR-MISS] d_irms=-0.7, d_h1=42.3, baseline_irms=102.2, baseline_h1=2206.5
+2026-05-21 19:43:21,951 [INFO] [NEAR-MISS] d_irms=0.8, d_h1=108.6, baseline_irms=102.2, baseline_h1=2208.0
+2026-05-21 19:43:24,431 [INFO] [NEAR-MISS] d_irms=-1.8, d_h1=30.7, baseline_irms=101.6, baseline_h1=2209.9
+2026-05-21 19:43:24,749 [INFO] [EVENT-TRIG] cond2 ON d_irms=31.3, d_h1=1576.2
+2026-05-21 19:43:24,750 [INFO] [PENDING ON] start frame=357, wait=8, pre_I=101.6, pre_H1=2210.0
+2026-05-21 19:43:27,250 [INFO] [ID-STABLE] chosen=dryer conf=1.00 method=range_high_power_guard details={'abs': 'microwave:0.97', 'delta': 'microwave:0.48', 'range': 'dryer:0.00', 'dI': 334.3, 'dH1': 16596.6, 'dPabs': 58163.9}
+2026-05-21 19:43:27,250 [INFO] [ID-STABLE] probs_abs={'charger': 0.0, 'cleaner': 0.003, 'dryer': 0.03, 'microwave': 0.967, 'tv': 0.0}
+2026-05-21 19:43:27,251 [INFO] [ID-STABLE] probs_delta={'charger': 0.06, 'cleaner': 0.333, 'dryer': 0.093, 'microwave': 0.483, 'tv': 0.03}
+2026-05-21 19:43:27,251 [INFO] [ID-STABLE] range_scores={'charger': 60.817, 'cleaner': 5.662, 'dryer': 0.0, 'microwave': 1.3, 'tv': 25.522}
+2026-05-21 19:43:27,252 [INFO] [ON MODE UPDATE] dryer already active, treat as mode/power update
+2026-05-21 19:43:29,142 [INFO] [EVENT-TRIG] cond2 ON d_irms=12.9, d_h1=759.2
+2026-05-21 19:43:29,142 [INFO] [PENDING ON] start frame=371, wait=8, pre_I=541.5, pre_H1=23879.8
+2026-05-21 19:43:31,670 [INFO] [ID-STABLE] chosen=dryer conf=0.98 method=range_high_power_guard details={'abs': 'microwave:0.99', 'delta': 'tv:0.58', 'range': 'dryer:0.06', 'dI': 25.1, 'dH1': 2041.5, 'dPabs': 27216.1}
+2026-05-21 19:43:31,672 [INFO] [ID-STABLE] probs_abs={'charger': 0.0, 'cleaner': 0.0, 'dryer': 0.01, 'microwave': 0.99, 'tv': 0.0}
+2026-05-21 19:43:31,673 [INFO] [ID-STABLE] probs_delta={'charger': 0.177, 'cleaner': 0.07, 'dryer': 0.173, 'microwave': 0.0, 'tv': 0.58}
+2026-05-21 19:43:31,675 [INFO] [ID-STABLE] range_scores={'charger': 7.523, 'cleaner': 3.496, 'dryer': 0.065, 'microwave': 3.815, 'tv': 1.719}
+2026-05-21 19:43:31,675 [INFO] [ON MODE UPDATE] dryer already active, treat as mode/power update
+2026-05-21 19:43:34,434 [INFO] [NEAR-MISS] d_irms=2.8, d_h1=110.9, baseline_irms=569.3, baseline_h1=25931.9
+2026-05-21 19:43:35,332 [INFO] [EVENT-TRIG] cond2 ON d_irms=6.5, d_h1=121.6
+2026-05-21 19:43:35,333 [INFO] [PENDING ON] start frame=391, wait=8, pre_I=569.4, pre_H1=25934.2
+2026-05-21 19:43:37,975 [INFO] [ID-STABLE] chosen=dryer conf=0.84 method=range_high_power_guard details={'abs': 'microwave:0.89', 'delta': 'tv:0.68', 'range': 'dryer:0.44', 'dI': -280.3, 'dH1': -14226.0, 'dPabs': -153247.0}
+2026-05-21 19:43:37,975 [INFO] [ID-STABLE] probs_abs={'charger': 0.0, 'cleaner': 0.043, 'dryer': 0.07, 'microwave': 0.887, 'tv': 0.0}
+2026-05-21 19:43:37,976 [INFO] [ID-STABLE] probs_delta={'charger': 0.033, 'cleaner': 0.037, 'dryer': 0.247, 'microwave': 0.0, 'tv': 0.683}
+2026-05-21 19:43:37,977 [INFO] [ID-STABLE] range_scores={'charger': 65.656, 'cleaner': 12.879, 'dryer': 0.443, 'microwave': 5.944, 'tv': 31.942}
+2026-05-21 19:43:37,977 [INFO] [ON MODE UPDATE] dryer already active, treat as mode/power update
+2026-05-21 19:43:40,634 [INFO] [EVENT-TRIG] cond2 OFF d_irms=-6.5, d_h1=-903.6
+2026-05-21 19:43:40,635 [WARNING] [OFF REJECT] no matching active signature drop={'delta_irms': 6.500922706587161, 'delta_h1': 903.5551369818447, 'delta_pabs': 2486.2347592905644}
+2026-05-21 19:43:43,149 [INFO] [NEAR-MISS] d_irms=-2.4, d_h1=-228.0, baseline_irms=86.5, baseline_h1=262.7
+2026-05-21 19:43:44,398 [INFO] [NEAR-MISS] d_irms=-2.8, d_h1=-219.3, baseline_irms=86.5, baseline_h1=257.3
+2026-05-21 19:43:45,631 [INFO] [NEAR-MISS] d_irms=-4.1, d_h1=-215.4, baseline_irms=86.4, baseline_h1=252.1
+2026-05-21 19:43:46,564 [INFO] [EVENT-TRIG] cond2 OFF d_irms=-6.2, d_h1=-218.7
+2026-05-21 19:43:46,564 [WARNING] [OFF REJECT] no matching active signature drop={'delta_irms': 6.2204310926677095, 'delta_h1': 218.71489015033993, 'delta_pabs': 2886.5949985551706}
+2026-05-21 19:44:10,203 [INFO] [RELAY] socket1 pin=17 -> OFF
+2026-05-21 19:44:10,204 [INFO] [RELAY] socket2 pin=27 -> OFF
+2026-05-21 19:44:10,205 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-05-21 19:44:10,205 [INFO] [RELAY] socket4 pin=23 -> OFF
+2026-05-21 19:44:10,206 [INFO] [RELAY] closed (all OFF, GPIO cleanup)

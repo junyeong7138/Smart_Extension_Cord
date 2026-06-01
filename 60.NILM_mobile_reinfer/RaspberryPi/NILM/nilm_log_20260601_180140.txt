@@ -1,0 +1,71 @@
+2026-06-01 18:01:40,154 [INFO] [AI VERSION] ai_engine_v2_2026_05_31_off_fullscan_by_orchestrator
+2026-06-01 18:01:40,155 [INFO] [LOG FILE] /home/wattsup/Project/60.NILM_mobile_reinfer/RaspberryPi/NILM/nilm_log_20260601_180140.txt
+2026-06-01 18:01:41,535 [INFO] [RELAY] init pins={1: 17, 2: 27, 3: 22, 4: 23} active_high=True real_gpio=True
+2026-06-01 18:01:41,538 [INFO] [RELAY] socket1 pin=17 -> OFF
+2026-06-01 18:01:41,539 [INFO] [RELAY] socket2 pin=27 -> OFF
+2026-06-01 18:01:41,541 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-06-01 18:01:41,542 [INFO] [RELAY] socket4 pin=23 -> OFF
+2026-06-01 18:01:43,697 [INFO] Model loaded. classes=['charger', 'cleaner', 'dryer', 'microwave', 'tv']
+2026-06-01 18:01:43,697 [INFO] Feature count: 28
+2026-06-01 18:01:43,698 [INFO] Model dir: /home/wattsup/Project/60.NILM_mobile_reinfer/Model
+2026-06-01 18:01:43,702 [INFO] [RELAY] socket1 pin=17 -> OFF
+2026-06-01 18:01:43,702 [INFO] [RELAY] socket2 pin=27 -> OFF
+2026-06-01 18:01:43,703 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-06-01 18:01:43,703 [INFO] [RELAY] socket4 pin=23 -> OFF
+2026-06-01 18:01:43,703 [INFO] [ORCH] init: all relays OFF (safe state)
+2026-06-01 18:01:43,704 [INFO] [ORCH] engine.process_ai_frame wrapped for win_feat capture
+2026-06-01 18:01:43,704 [INFO] [TOUCH] init pin=26 active_high=True real_gpio=True
+2026-06-01 18:01:43,722 [INFO] [ORCH] monitor started
+2026-06-01 18:01:43,726 [INFO] [TOUCH] polling started
+2026-06-01 18:01:43,738 [INFO] [MOBILE UI] serving on http://0.0.0.0:5000
+2026-06-01 18:01:47,730 [INFO] [INIT BASELINE] Irms=73.57, H1=66.83
+2026-06-01 18:01:47,731 [INFO] [STARTUP] Irms=73.57 높지만 H1=66.83 < 300.0 → 센서 idle 오프셋으로 처리.
+2026-06-01 18:02:10,289 [INFO] [TOUCH] press detected
+2026-06-01 18:02:10,295 [INFO] [RELAY] socket1 pin=17 -> ON
+2026-06-01 18:02:10,298 [INFO] [RELAY] socket2 pin=27 -> ON
+2026-06-01 18:02:10,299 [INFO] [RELAY] socket3 pin=22 -> ON
+2026-06-01 18:02:10,302 [INFO] [RELAY] socket4 pin=23 -> ON
+2026-06-01 18:02:10,306 [INFO] [ORCH] touch → sockets [1, 2, 3, 4] relay ON (PENDING, 일괄 활성화)
+2026-06-01 18:02:10,688 [INFO] [TOUCH] press detected
+2026-06-01 18:02:10,692 [INFO] [ORCH] touch ignored - no EMPTY/DEVICE_OFF socket (S1:PENDING, S2:PENDING, S3:PENDING, S4:PENDING)
+2026-06-01 18:02:19,140 [INFO] [NEAR-MISS] d_irms=1.3, d_h1=36.9, baseline_irms=72.8, baseline_h1=55.6
+2026-06-01 18:02:20,507 [INFO] [EVENT-TRIG] h1-only low-power ON d_irms=3.5, d_h1=395.7, d_pabs=1094.7
+2026-06-01 18:02:20,508 [INFO] [PENDING ON] start frame=112, wait=8, pre_I=72.8, pre_H1=58.1
+2026-06-01 18:02:23,376 [INFO] [ID-STABLE] chosen=tv conf=0.70 method=low_power_rf_signal_match_delta details={'abs': 'tv:0.49', 'delta': 'tv:0.70', 'range': 'dryer:0.06', 'dI': 10.0, 'dH1': 1564.7, 'dPabs': 3113.5}
+2026-06-01 18:02:23,379 [INFO] [ID-STABLE] probs_abs={'charger': 0.057, 'cleaner': 0.03, 'dryer': 0.417, 'microwave': 0.003, 'tv': 0.493}
+2026-06-01 18:02:23,379 [INFO] [ID-STABLE] probs_delta={'charger': 0.23, 'cleaner': 0.0, 'dryer': 0.07, 'microwave': 0.0, 'tv': 0.7}
+2026-06-01 18:02:23,380 [INFO] [ID-STABLE] range_scores={'charger': 0.727, 'cleaner': 4.005, 'dryer': 0.064, 'microwave': 3.563, 'tv': 1.431}
+2026-06-01 18:02:23,381 [INFO] [DEVICE ON] Socket1 <- tv (60W, conf=0.70, method=low_power_rf_signal_match_delta, d_irms=10.0, d_h1=1564.7, d_pabs=3113.5, details={'abs': 'tv:0.49', 'delta': 'tv:0.70', 'range': 'dryer:0.06', 'dI': 10.0, 'dH1': 1564.7, 'dPabs': 3113.5})
+2026-06-01 18:02:23,880 [INFO] [RELAY] socket1 pin=17 -> OFF
+2026-06-01 18:02:24,384 [INFO] [RELAY] socket1 pin=17 -> ON
+2026-06-01 18:02:24,652 [INFO] [ORCH][TOGGLE-ID] dev=tv socket1: diff_I=+1.0, diff_H1=-161.0, i_b_avg=82.3, i_off_avg=81.3 (n_b=4, n_off=5)
+2026-06-01 18:02:24,981 [INFO] [RELAY] socket2 pin=27 -> OFF
+2026-06-01 18:02:25,450 [INFO] [RELAY] socket2 pin=27 -> ON
+2026-06-01 18:02:25,631 [INFO] [ORCH][TOGGLE-ID] dev=tv socket2: diff_I=+0.5, diff_H1=-36.6, i_b_avg=80.0, i_off_avg=79.5 (n_b=4, n_off=5)
+2026-06-01 18:02:25,959 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-06-01 18:02:26,427 [INFO] [RELAY] socket3 pin=22 -> ON
+2026-06-01 18:02:26,606 [INFO] [ORCH][TOGGLE-ID] dev=tv socket3: diff_I=+4.8, diff_H1=+1281.8, i_b_avg=79.4, i_off_avg=74.6 (n_b=4, n_off=5)
+2026-06-01 18:02:26,933 [INFO] [RELAY] socket4 pin=23 -> OFF
+2026-06-01 18:02:27,402 [INFO] [RELAY] socket4 pin=23 -> ON
+2026-06-01 18:02:27,575 [INFO] [ORCH][TOGGLE-ID] dev=tv socket4: diff_I=-2.1, diff_H1=-38.8, i_b_avg=76.0, i_off_avg=78.0 (n_b=4, n_off=5)
+2026-06-01 18:02:27,576 [INFO] [ORCH][TOGGLE-ID-SKIP] socket4 diff_I=-2.1 음수 → 다른 가전 noise 가능성, 후보 제외
+2026-06-01 18:02:27,577 [INFO] [ORCH] assigned tv → socket3 (toggle-id)
+2026-06-01 18:02:39,139 [INFO] [NEAR-MISS] d_irms=-0.5, d_h1=-85.9, baseline_irms=82.5, baseline_h1=1634.7
+2026-06-01 18:02:40,563 [INFO] [NEAR-MISS] d_irms=-2.2, d_h1=-230.0, baseline_irms=82.4, baseline_h1=1631.2
+2026-06-01 18:02:41,952 [INFO] [NEAR-MISS] d_irms=-3.4, d_h1=-341.1, baseline_irms=82.4, baseline_h1=1624.3
+2026-06-01 18:02:43,346 [INFO] [NEAR-MISS] d_irms=-3.8, d_h1=-307.1, baseline_irms=82.3, baseline_h1=1616.3
+2026-06-01 18:02:44,682 [INFO] [NEAR-MISS] d_irms=-2.7, d_h1=-289.2, baseline_irms=82.2, baseline_h1=1609.0
+2026-06-01 18:02:46,012 [INFO] [NEAR-MISS] d_irms=-1.9, d_h1=-278.5, baseline_irms=82.1, baseline_h1=1602.3
+2026-06-01 18:02:47,433 [INFO] [NEAR-MISS] d_irms=-2.0, d_h1=-283.4, baseline_irms=82.1, baseline_h1=1595.5
+2026-06-01 18:02:48,775 [INFO] [NEAR-MISS] d_irms=-2.3, d_h1=-258.3, baseline_irms=82.0, baseline_h1=1588.9
+2026-06-01 18:02:50,113 [INFO] [NEAR-MISS] d_irms=-2.3, d_h1=-251.6, baseline_irms=82.0, baseline_h1=1582.8
+2026-06-01 18:02:51,451 [INFO] [NEAR-MISS] d_irms=-2.2, d_h1=-224.0, baseline_irms=81.9, baseline_h1=1577.1
+2026-06-01 18:02:52,877 [INFO] [NEAR-MISS] d_irms=-2.5, d_h1=-215.2, baseline_irms=81.9, baseline_h1=1571.7
+2026-06-01 18:02:54,263 [INFO] [NEAR-MISS] d_irms=-2.5, d_h1=-228.0, baseline_irms=81.8, baseline_h1=1566.5
+2026-06-01 18:02:54,602 [INFO] [TOUCH] closed
+2026-06-01 18:02:54,734 [INFO] [ORCH] closed
+2026-06-01 18:02:54,735 [INFO] [RELAY] socket1 pin=17 -> OFF
+2026-06-01 18:02:54,736 [INFO] [RELAY] socket2 pin=27 -> OFF
+2026-06-01 18:02:54,737 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-06-01 18:02:54,737 [INFO] [RELAY] socket4 pin=23 -> OFF
+2026-06-01 18:02:54,738 [INFO] [RELAY] closed (all OFF, GPIO cleanup)

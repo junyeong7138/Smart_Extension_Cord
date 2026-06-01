@@ -1,0 +1,65 @@
+2026-06-01 06:32:28,405 [INFO] [AI VERSION] ai_engine_v2_2026_05_31_off_fullscan_by_orchestrator
+2026-06-01 06:32:28,408 [INFO] [LOG FILE] /home/wattsup/Project/kim/RaspberryPi/NILM/nilm_log_20260601_063228.txt
+2026-06-01 06:32:29,828 [INFO] [RELAY] init pins={1: 17, 2: 27, 3: 22, 4: 23} active_high=True real_gpio=True
+2026-06-01 06:32:29,831 [INFO] [RELAY] socket1 pin=17 -> OFF
+2026-06-01 06:32:29,832 [INFO] [RELAY] socket2 pin=27 -> OFF
+2026-06-01 06:32:29,834 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-06-01 06:32:29,835 [INFO] [RELAY] socket4 pin=23 -> OFF
+2026-06-01 06:32:31,979 [INFO] Model loaded. classes=['charger', 'cleaner', 'dryer', 'microwave', 'tv']
+2026-06-01 06:32:31,982 [INFO] Feature count: 28
+2026-06-01 06:32:31,983 [INFO] Model dir: /home/wattsup/Project/kim/Model
+2026-06-01 06:32:31,988 [INFO] [RELAY] socket1 pin=17 -> OFF
+2026-06-01 06:32:31,989 [INFO] [RELAY] socket2 pin=27 -> OFF
+2026-06-01 06:32:31,989 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-06-01 06:32:31,990 [INFO] [RELAY] socket4 pin=23 -> OFF
+2026-06-01 06:32:31,990 [INFO] [ORCH] init: all relays OFF (safe state)
+2026-06-01 06:32:31,991 [INFO] [ORCH] engine.process_ai_frame wrapped for win_feat capture
+2026-06-01 06:32:31,992 [INFO] [TOUCH] init pin=26 active_high=True real_gpio=True
+2026-06-01 06:32:32,011 [INFO] [ORCH] monitor started
+2026-06-01 06:32:32,020 [INFO] [TOUCH] polling started
+2026-06-01 06:32:32,070 [INFO] [MOBILE UI] serving on http://0.0.0.0:5000
+2026-06-01 06:32:35,925 [INFO] [INIT BASELINE] Irms=28.02, H1=54.74
+2026-06-01 06:32:42,562 [INFO] [TOUCH] press detected
+2026-06-01 06:32:42,567 [INFO] [RELAY] socket1 pin=17 -> ON
+2026-06-01 06:32:42,574 [INFO] [RELAY] socket2 pin=27 -> ON
+2026-06-01 06:32:42,579 [INFO] [RELAY] socket3 pin=22 -> ON
+2026-06-01 06:32:42,589 [INFO] [RELAY] socket4 pin=23 -> ON
+2026-06-01 06:32:42,600 [INFO] [ORCH] touch → sockets [1, 2, 3, 4] relay ON (PENDING, 일괄 활성화)
+2026-06-01 06:32:50,809 [INFO] [EVENT-TRIG] h1-only low-power ON d_irms=38.9, d_h1=2014.7, d_pabs=23714.6
+2026-06-01 06:32:50,809 [INFO] [PENDING ON] start frame=57, wait=8, pre_I=27.5, pre_H1=57.1
+2026-06-01 06:32:53,657 [INFO] [ID-STABLE] chosen=dryer conf=0.99 method=dryer_strong_guarded details={'abs': 'dryer:0.99', 'delta': 'dryer:0.99', 'range': 'dryer:0.00', 'dI': 342.4, 'dH1': 18046.8, 'dPabs': 198269.5}
+2026-06-01 06:32:53,659 [INFO] [ID-STABLE] probs_abs={'charger': 0.0, 'cleaner': 0.007, 'dryer': 0.993, 'microwave': 0.0, 'tv': 0.0}
+2026-06-01 06:32:53,660 [INFO] [ID-STABLE] probs_delta={'charger': 0.0, 'cleaner': 0.0, 'dryer': 0.993, 'microwave': 0.007, 'tv': 0.0}
+2026-06-01 06:32:53,660 [INFO] [ID-STABLE] range_scores={'charger': 18.02, 'cleaner': 7.987, 'dryer': 0.0, 'microwave': 0.602, 'tv': 31.027}
+2026-06-01 06:32:53,662 [INFO] [DEVICE ON] Socket1 <- dryer (1800W, conf=0.99, method=dryer_strong_guarded, d_irms=342.4, d_h1=18046.8, d_pabs=198269.5, details={'abs': 'dryer:0.99', 'delta': 'dryer:0.99', 'range': 'dryer:0.00', 'dI': 342.4, 'dH1': 18046.8, 'dPabs': 198269.5})
+2026-06-01 06:32:54,206 [INFO] [RELAY] socket1 pin=17 -> OFF
+2026-06-01 06:32:54,835 [INFO] [RELAY] socket1 pin=17 -> ON
+2026-06-01 06:32:55,010 [INFO] [ORCH][TOGGLE-ID] dev=dryer socket1: diff_I=-4.4, diff_H1=-3330.7, i_b_avg=398.5, i_off_avg=402.9 (n_b=4, n_off=5)
+2026-06-01 06:32:55,360 [INFO] [RELAY] socket2 pin=27 -> OFF
+2026-06-01 06:32:55,884 [INFO] [RELAY] socket2 pin=27 -> ON
+2026-06-01 06:32:56,060 [INFO] [ORCH][TOGGLE-ID] dev=dryer socket2: diff_I=+0.5, diff_H1=+111.1, i_b_avg=403.6, i_off_avg=403.1 (n_b=4, n_off=5)
+2026-06-01 06:32:56,409 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-06-01 06:32:56,944 [INFO] [RELAY] socket3 pin=22 -> ON
+2026-06-01 06:32:57,155 [INFO] [ORCH][TOGGLE-ID] dev=dryer socket3: diff_I=+377.4, diff_H1=+19882.6, i_b_avg=404.9, i_off_avg=27.4 (n_b=4, n_off=5)
+2026-06-01 06:32:57,528 [INFO] [RELAY] socket4 pin=23 -> OFF
+2026-06-01 06:32:58,076 [INFO] [RELAY] socket4 pin=23 -> ON
+2026-06-01 06:32:58,255 [INFO] [ORCH][TOGGLE-ID] dev=dryer socket4: diff_I=+5.2, diff_H1=-125.5, i_b_avg=409.5, i_off_avg=404.3 (n_b=4, n_off=5)
+2026-06-01 06:32:58,256 [INFO] [ORCH][TOGGLE-ID] dryer presence-strong 채택: socket3 (presence=1.10, sig_di=342.4, diff_I=+377.4, diff_H1=+19882.6)
+2026-06-01 06:32:58,256 [INFO] [ORCH] assigned dryer → socket3 (toggle-id)
+2026-06-01 06:33:07,470 [INFO] [NEAR-MISS] d_irms=-2.8, d_h1=-1788.8, baseline_irms=404.3, baseline_h1=19474.7
+2026-06-01 06:33:08,337 [INFO] [OFF-SUSPECT] H1 drop=2241.1 > 485 (floor=400, 부하비례=485, active_load=19407, baseline_h1=19464.0, current_h1=17222.9, active=['dryer']) → orchestrator 전수 스캔 위임
+2026-06-01 06:33:08,495 [INFO] [ORCH][OFF-SCAN] 시작 targets=[(3, 'dryer')] shortfall=2241.1
+2026-06-01 06:33:09,654 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-06-01 06:33:10,629 [INFO] [RELAY] socket3 pin=22 -> ON
+2026-06-01 06:33:10,940 [INFO] [ORCH][OFF-SCAN] dryer@S3: ΔH1=+503, sig_dh1=18047, ratio_h1=0.03, ΔI=+130.4 → absent
+2026-06-01 06:33:10,942 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-06-01 06:33:10,945 [INFO] [DEVICE OFF] dryer confirmed by orchestrator full-scan (socket idx=1)
+2026-06-01 06:33:10,946 [INFO] [ORCH] dryer OFF (full-scan) → socket3 relay OFF (standby cut)
+2026-06-01 06:33:10,947 [INFO] [ORCH][OFF-SCAN] shortfall 잔량=-15805.8 ≤ 300.0 → 조기 종료
+2026-06-01 06:33:16,617 [INFO] [TOUCH] closed
+2026-06-01 06:33:16,729 [INFO] [ORCH] closed
+2026-06-01 06:33:16,733 [INFO] [RELAY] socket1 pin=17 -> OFF
+2026-06-01 06:33:16,734 [INFO] [RELAY] socket2 pin=27 -> OFF
+2026-06-01 06:33:16,747 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-06-01 06:33:16,749 [INFO] [RELAY] socket4 pin=23 -> OFF
+2026-06-01 06:33:16,750 [INFO] [RELAY] closed (all OFF, GPIO cleanup)
