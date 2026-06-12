@@ -1,7 +1,7 @@
 {
-  "dryer": 10,
+  "dryer": 0,
   "microwave": 0,
-  "cleaner": 20,
+  "cleaner": 0,
   "tv": 0,
   "charger": 0
 }

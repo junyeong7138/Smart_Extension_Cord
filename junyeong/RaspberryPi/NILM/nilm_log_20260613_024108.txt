@@ -1,0 +1,48 @@
+2026-06-13 02:41:08,017 [INFO] [AI VERSION] ai_engine_v2_2026_05_31_off_fullscan_by_orchestrator
+2026-06-13 02:41:08,020 [INFO] [LOG FILE] /home/wattsup/Project/junyeong/RaspberryPi/NILM/nilm_log_20260613_024108.txt
+2026-06-13 02:41:09,890 [INFO] [RELAY] init pins={1: 17, 2: 27, 3: 22, 4: 23} active_high=True real_gpio=True
+2026-06-13 02:41:09,892 [INFO] [RELAY] socket1 pin=17 -> OFF
+2026-06-13 02:41:09,892 [INFO] [RELAY] socket2 pin=27 -> OFF
+2026-06-13 02:41:09,893 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-06-13 02:41:09,893 [INFO] [RELAY] socket4 pin=23 -> OFF
+2026-06-13 02:41:13,758 [INFO] Model loaded. classes=['charger', 'cleaner', 'dryer', 'microwave', 'tv']
+2026-06-13 02:41:13,758 [INFO] Feature count: 28
+2026-06-13 02:41:13,759 [INFO] Model dir: /home/wattsup/Project/junyeong/Model
+2026-06-13 02:41:13,763 [INFO] [SAFETY-LIMITS] 로드: {'dryer': 10, 'microwave': 0, 'cleaner': 20, 'tv': 0, 'charger': 0} (/home/wattsup/Project/junyeong/RaspberryPi/control/safety_limits.json)
+2026-06-13 02:41:13,763 [INFO] [RELAY] socket1 pin=17 -> OFF
+2026-06-13 02:41:13,764 [INFO] [RELAY] socket2 pin=27 -> OFF
+2026-06-13 02:41:13,764 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-06-13 02:41:13,764 [INFO] [RELAY] socket4 pin=23 -> OFF
+2026-06-13 02:41:13,764 [INFO] [ORCH] init: all relays OFF (safe state)
+2026-06-13 02:41:13,765 [INFO] [ORCH] engine.process_ai_frame wrapped for win_feat capture
+2026-06-13 02:41:13,765 [INFO] [BUTTON1] init pin=5 active_high=True real_gpio=True
+2026-06-13 02:41:13,765 [INFO] [BUTTON2] init pin=6 active_high=True real_gpio=True
+2026-06-13 02:41:13,788 [INFO] [ORCH] monitor started
+2026-06-13 02:41:13,789 [INFO] [BUTTON1] press detected
+2026-06-13 02:41:13,789 [INFO] [BUTTON1] polling started
+2026-06-13 02:41:13,795 [INFO] [RELAY] socket1 pin=17 -> ON
+2026-06-13 02:41:13,796 [INFO] [BUTTON2] press detected
+2026-06-13 02:41:13,797 [INFO] [BUTTON2] polling started
+2026-06-13 02:41:13,797 [INFO] [RELAY] socket2 pin=27 -> ON
+2026-06-13 02:41:13,801 [INFO] [TIMER] manager started
+2026-06-13 02:41:13,802 [INFO] [RELAY] socket3 pin=22 -> ON
+2026-06-13 02:41:13,807 [INFO] [RELAY] socket4 pin=23 -> ON
+2026-06-13 02:41:13,809 [INFO] [ORCH] touch -> sockets [1, 2, 3, 4] relay ON (PENDING, batch on)
+2026-06-13 02:41:13,811 [INFO] [RELAY] socket1 pin=17 -> OFF
+2026-06-13 02:41:13,815 [INFO] [RELAY] socket2 pin=27 -> OFF
+2026-06-13 02:41:13,817 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-06-13 02:41:13,818 [INFO] [RELAY] socket4 pin=23 -> OFF
+2026-06-13 02:41:13,819 [INFO] [MOBILE UI] serving on http://0.0.0.0:5000
+2026-06-13 02:41:13,821 [INFO] [ORCH] button2 -> ALL OFF (all sockets off)
+2026-06-13 02:41:15,448 [INFO] [AUDIO] player=aplay, sounds=/home/wattsup/Project/junyeong/RaspberryPi/ui/sounds
+2026-06-13 02:41:20,658 [INFO] [INIT BASELINE] Irms=31.09, H1=59.66
+2026-06-13 02:41:20,658 [INFO] [STARTUP] Irms=31.09 높지만 H1=59.66 < 300.0 → 센서 idle 오프셋으로 처리.
+2026-06-13 02:42:16,086 [INFO] [BUTTON1] closed
+2026-06-13 02:42:16,105 [INFO] [BUTTON2] closed
+2026-06-13 02:42:16,231 [INFO] [TIMER] manager closed
+2026-06-13 02:42:16,281 [INFO] [ORCH] closed
+2026-06-13 02:42:16,285 [INFO] [RELAY] socket1 pin=17 -> OFF
+2026-06-13 02:42:16,285 [INFO] [RELAY] socket2 pin=27 -> OFF
+2026-06-13 02:42:16,292 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-06-13 02:42:16,293 [INFO] [RELAY] socket4 pin=23 -> OFF
+2026-06-13 02:42:16,294 [INFO] [RELAY] closed (all OFF, GPIO cleanup)

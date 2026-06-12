@@ -1,17 +1,35 @@
-13번에 wattsup HW FFT VER.2의 다음 단계입니다.
-이번 20번 폴더에서는 NILM에 관하여 시작할겁니다.
-NILM 파일 안에 수집, 시각화, 추출, 결론, 가전기기별 데이터 등의 파일을 만들어 볼 예정입니다.
+# 20. WattsUp_NILM — NILM 시작: 수집 → 전처리 → RandomForest
 
-----------------------------------------------------------------------
-[기기 데이터 수집]
-라즈베리파이 폴더 내에 있는 1번 파일
-RAW파일 생성
+> NILM(Non-Intrusive Load Monitoring) 첫 단계.
+> **데이터 수집 → 전처리 → 학습**의 3단계 파이프라인을 만들고
+> 단일 기기 분류에서 **정확도 약 90%** 를 확인했습니다.
 
-[기기 데이터 전처리]
-라즈베리파이 폴더 내에 있는 2번 파일
-summary파일 생성
+## Pipeline
 
-[랜덤포레스트]
-라즈베리파이 폴더 내에 있는 3번 파일로부터 90퍼센트 정확도 확인
-----------------------------------------------------------
-확실한 수집부터 추론까지 확인
+```
+1.raw_data_collector.py   기기별 RAW 파형 수집 (5초 OFF → 20초 ON 패턴)
+        ↓  Data/RAW/*.csv
+2.make_summary_from_raw.py 특징 추출/요약 (summary 파일 생성)
+        ↓  Data/SUMMARY/*.csv
+3.train_device_classifier.py RandomForest 학습 → Model/ 저장
+```
+
+## Key Files
+
+| File | Description |
+|---|---|
+| `RaspberryPi/1.raw_data_collector.py` | 기기별 RAW 데이터 수집 |
+| `RaspberryPi/2.make_summary_from_raw.py` | 전처리 — summary 생성 |
+| `RaspberryPi/3.train_device_classifier.py` | RandomForest 학습 (n_estimators=300, max_depth=8) |
+| `RaspberryPi/main.py` + `spi_core/dsp_engine/dashboard_ui` | 13에서 가져온 실시간 모니터 |
+| `Model/rf_device_classifier.joblib` | 학습된 분류기 |
+| `Model/rf_device_features.json` | feature 정의 (170개) |
+
+## Targets & Result
+
+- 대상 기기: charger / cooker / dryer / fan
+- 단일 기기 분류 정확도 **≈ 90%** — 수집부터 추론까지 전체 흐름 검증 완료
+
+## Next
+
+→ `21.WattsUp_NILM` 에서 기기 *조합* 인식 실험.
