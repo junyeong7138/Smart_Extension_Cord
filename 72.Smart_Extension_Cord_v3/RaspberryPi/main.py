@@ -19,18 +19,9 @@ import sys
 import os
 import logging
 
-# 역할별 폴더 구조 (2026-06-12 정리). 모듈 간 import 는 기존처럼 bare name
-# (`from spi_core import ...`)을 유지하고, 여기서 폴더들을 sys.path 에 올린다.
-#   hardware/ : SPI·DSP·릴레이·버튼 (HW 계층)
-#   control/  : orchestrator·타이머·안전한도 (제어 로직)
-#   ui/       : 모니터(matplotlib)·모바일(Flask) UI
-#   NILM/     : 분류 엔진·feature·데이터 파이프라인
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 NILM_DIR = os.path.join(BASE_DIR, "NILM")
-for _sub in ("hardware", "control", "ui", "NILM"):
-    _p = os.path.join(BASE_DIR, _sub)
-    if _p not in sys.path:
-        sys.path.append(_p)
+sys.path.append(NILM_DIR)
 
 from spi_core import SPICore
 # 분류 엔진: ai_engine_v2 의 AIEngine (OFF 재구성판). UI 는 socket_dashboard 가 담당.
@@ -42,7 +33,6 @@ from relay_controller import RelayController
 from touch_sensor import TouchSensor
 from socket_orchestrator_v2 import SocketOrchestrator
 from socket_timer import TimerManager
-from safety_limits import SafetyLimits
 import mobile_ui
 
 
@@ -62,13 +52,8 @@ def main():
     # AIEngine: 기기 분류만 담당. 내부 socket 매핑은 그대로 유지.
     engine = AIEngine(spi_core=spi)
 
-    # SafetyLimits: 기기별 안전 자동차단 한도 (safety_limits.json — 없으면 기본값 생성).
-    # Settings UI(모니터/모바일)의 Limit 메뉴에서 편집, orchestrator 가 매 tick 참조.
-    safety = SafetyLimits()
-
-    # SocketOrchestrator: 물리 소켓 매핑 + 토글 식별 (+ 안전 한도 자동차단)
-    orchestrator = SocketOrchestrator(relay_controller=relay, ai_engine=engine,
-                                      safety_limits=safety)
+    # SocketOrchestrator: 물리 소켓 매핑 + 토글 식별
+    orchestrator = SocketOrchestrator(relay_controller=relay, ai_engine=engine)
 
     # 2개 푸시버튼 (터치센서 대체):
     #   버튼1(GPIO5): EMPTY/DEVICE_OFF(=OFF) → PENDING 활성화 (on_touch)
@@ -82,7 +67,7 @@ def main():
     # mobile_ui: 실시간 전력 + 소켓별 기기 정보 + 예약 타이머 (engine/orchestrator/timer 주입).
     # 수동 토글 백업 기능은 그대로 유지.
     mobile_ui.start_in_background(relay, engine=engine, orchestrator=orchestrator,
-                                  timer_manager=timer_mgr, safety_limits=safety)
+                                  timer_manager=timer_mgr)
 
     # 백그라운드 시작
     orchestrator.start()
@@ -94,7 +79,7 @@ def main():
         # 분류 엔진(engine) + 물리 매핑(orchestrator) 을 UI 에 주입.
         # UI 의 socket 표시는 engine 의 가상 socket 이 아니라 orchestrator 매핑을 따른다.
         dashboard = SocketDashboard(engine=engine, orchestrator=orchestrator,
-                                    timer_manager=timer_mgr, safety_limits=safety)
+                                    timer_manager=timer_mgr)
 
         print("=" * 60)
         print(" WattsUp NILM Monitor")

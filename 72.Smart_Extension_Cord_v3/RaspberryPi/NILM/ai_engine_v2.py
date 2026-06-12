@@ -51,11 +51,6 @@ import joblib
 _THIS_DIR = os.path.dirname(os.path.abspath(__file__))
 if _THIS_DIR not in sys.path:
     sys.path.insert(0, _THIS_DIR)
-# 2026-06-12 폴더 정리: dsp_engine 이 RaspberryPi/hardware/ 로 이동 → 어디서 실행해도
-# (main.py 경유 / NILM 스크립트 단독) 찾을 수 있게 hardware 경로도 추가.
-_HW_DIR = os.path.abspath(os.path.join(_THIS_DIR, "..", "hardware"))
-if _HW_DIR not in sys.path:
-    sys.path.insert(0, _HW_DIR)
 
 from dsp_engine import DSPEngine
 from feature_extractor import (

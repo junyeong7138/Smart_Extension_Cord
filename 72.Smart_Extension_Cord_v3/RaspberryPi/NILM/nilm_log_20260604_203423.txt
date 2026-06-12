@@ -1,0 +1,211 @@
+2026-06-04 20:34:23,123 [INFO] [AI VERSION] ai_engine_v2_2026_05_31_off_fullscan_by_orchestrator
+2026-06-04 20:34:23,125 [INFO] [LOG FILE] /home/wattsup/Project/junyeong/RaspberryPi/NILM/nilm_log_20260604_203423.txt
+2026-06-04 20:34:24,497 [INFO] [RELAY] init pins={1: 17, 2: 27, 3: 22, 4: 23} active_high=True real_gpio=True
+2026-06-04 20:34:24,499 [INFO] [RELAY] socket1 pin=17 -> OFF
+2026-06-04 20:34:24,499 [INFO] [RELAY] socket2 pin=27 -> OFF
+2026-06-04 20:34:24,500 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-06-04 20:34:24,501 [INFO] [RELAY] socket4 pin=23 -> OFF
+2026-06-04 20:34:26,651 [INFO] Model loaded. classes=['charger', 'cleaner', 'dryer', 'microwave', 'tv']
+2026-06-04 20:34:26,652 [INFO] Feature count: 28
+2026-06-04 20:34:26,652 [INFO] Model dir: /home/wattsup/Project/junyeong/Model
+2026-06-04 20:34:26,656 [INFO] [RELAY] socket1 pin=17 -> OFF
+2026-06-04 20:34:26,656 [INFO] [RELAY] socket2 pin=27 -> OFF
+2026-06-04 20:34:26,657 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-06-04 20:34:26,657 [INFO] [RELAY] socket4 pin=23 -> OFF
+2026-06-04 20:34:26,657 [INFO] [ORCH] init: all relays OFF (safe state)
+2026-06-04 20:34:26,658 [INFO] [ORCH] engine.process_ai_frame wrapped for win_feat capture
+2026-06-04 20:34:26,658 [INFO] [BUTTON1] init pin=5 active_high=True real_gpio=True
+2026-06-04 20:34:26,659 [INFO] [BUTTON2] init pin=6 active_high=True real_gpio=True
+2026-06-04 20:34:26,692 [INFO] [ORCH] monitor started
+2026-06-04 20:34:26,693 [INFO] [BUTTON1] press detected
+2026-06-04 20:34:26,695 [INFO] [BUTTON1] polling started
+2026-06-04 20:34:26,696 [INFO] [RELAY] socket1 pin=17 -> ON
+2026-06-04 20:34:26,699 [INFO] [BUTTON2] press detected
+2026-06-04 20:34:26,699 [INFO] [BUTTON2] polling started
+2026-06-04 20:34:26,701 [INFO] [RELAY] socket2 pin=27 -> ON
+2026-06-04 20:34:26,704 [INFO] [MOBILE UI] serving on http://0.0.0.0:5000
+2026-06-04 20:34:26,707 [INFO] [TIMER] manager started
+2026-06-04 20:34:26,707 [INFO] [RELAY] socket3 pin=22 -> ON
+2026-06-04 20:34:26,713 [INFO] [RELAY] socket4 pin=23 -> ON
+2026-06-04 20:34:26,716 [INFO] [ORCH] touch -> sockets [1, 2, 3, 4] relay ON (PENDING, batch on)
+2026-06-04 20:34:26,717 [INFO] [RELAY] socket1 pin=17 -> OFF
+2026-06-04 20:34:26,719 [INFO] [RELAY] socket2 pin=27 -> OFF
+2026-06-04 20:34:26,720 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-06-04 20:34:26,721 [INFO] [RELAY] socket4 pin=23 -> OFF
+2026-06-04 20:34:26,739 [INFO] [ORCH] button2 -> ALL OFF (all sockets off)
+2026-06-04 20:34:31,509 [INFO] [INIT BASELINE] Irms=40.78, H1=70.78
+2026-06-04 20:34:31,510 [INFO] [STARTUP] Irms=40.78 높지만 H1=70.78 < 300.0 → 센서 idle 오프셋으로 처리.
+2026-06-04 20:34:54,821 [INFO] [NEAR-MISS] d_irms=-0.4, d_h1=20.6, baseline_irms=41.1, baseline_h1=60.3
+2026-06-04 20:34:56,445 [INFO] [NEAR-MISS] d_irms=-0.8, d_h1=21.0, baseline_irms=41.1, baseline_h1=60.9
+2026-06-04 20:35:10,365 [INFO] [RELAY] socket2 pin=27 -> ON
+2026-06-04 20:35:10,367 [INFO] [ORCH] external relay ON socket2: EMPTY → PENDING (preserved label=None)
+2026-06-04 20:35:10,368 [INFO] [DASH-RESCAN] Socket2 relay ON
+2026-06-04 20:35:11,159 [INFO] [RELAY] socket3 pin=22 -> ON
+2026-06-04 20:35:11,161 [INFO] [ORCH] external relay ON socket3: EMPTY → PENDING (preserved label=None)
+2026-06-04 20:35:11,162 [INFO] [DASH-RESCAN] Socket3 relay ON
+2026-06-04 20:35:11,985 [INFO] [RELAY] socket4 pin=23 -> ON
+2026-06-04 20:35:11,986 [INFO] [ORCH] external relay ON socket4: EMPTY → PENDING (preserved label=None)
+2026-06-04 20:35:11,987 [INFO] [DASH-RESCAN] Socket4 relay ON
+2026-06-04 20:35:17,042 [INFO] [EVENT-TRIG] h1-only low-power ON d_irms=36.2, d_h1=1942.5, d_pabs=18838.9
+2026-06-04 20:35:17,043 [INFO] [PENDING ON] start frame=119, wait=8, pre_I=40.6, pre_H1=64.1
+2026-06-04 20:35:20,557 [INFO] [ID-STABLE] chosen=cleaner conf=0.76 method=cleaner_delta_abs_priority details={'abs': 'cleaner:0.76', 'delta': 'dryer:0.57', 'range': 'dryer:0.00', 'dI': 120.9, 'dH1': 7258.3, 'dPabs': 66211.6}
+2026-06-04 20:35:20,559 [INFO] [ID-STABLE] probs_abs={'charger': 0.017, 'cleaner': 0.76, 'dryer': 0.207, 'microwave': 0.017, 'tv': 0.0}
+2026-06-04 20:35:20,560 [INFO] [ID-STABLE] probs_delta={'charger': 0.003, 'cleaner': 0.43, 'dryer': 0.567, 'microwave': 0.0, 'tv': 0.0}
+2026-06-04 20:35:20,560 [INFO] [ID-STABLE] range_scores={'charger': 5.623, 'cleaner': 0.456, 'dryer': 0.0, 'microwave': 2.536, 'tv': 9.098}
+2026-06-04 20:35:20,561 [INFO] [DEVICE ON] Socket1 <- cleaner (600W, conf=0.76, method=cleaner_delta_abs_priority, d_irms=120.9, d_h1=7258.3, d_pabs=66211.6, details={'abs': 'cleaner:0.76', 'delta': 'dryer:0.57', 'range': 'dryer:0.00', 'dI': 120.9, 'dH1': 7258.3, 'dPabs': 66211.6})
+2026-06-04 20:35:21,075 [INFO] [RELAY] socket2 pin=27 -> OFF
+2026-06-04 20:35:21,681 [INFO] [RELAY] socket2 pin=27 -> ON
+2026-06-04 20:35:21,950 [INFO] [ORCH][TOGGLE-ID] dev=cleaner socket2: diff_I=+1.9, diff_H1=-1673.4, i_b_avg=142.9, i_off_avg=140.9 (n_b=4, n_off=5)
+2026-06-04 20:35:22,277 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-06-04 20:35:22,748 [INFO] [RELAY] socket3 pin=22 -> ON
+2026-06-04 20:35:22,928 [INFO] [ORCH][TOGGLE-ID] dev=cleaner socket3: diff_I=+102.3, diff_H1=+6572.9, i_b_avg=143.3, i_off_avg=41.0 (n_b=4, n_off=5)
+2026-06-04 20:35:23,255 [INFO] [RELAY] socket4 pin=23 -> OFF
+2026-06-04 20:35:23,723 [INFO] [RELAY] socket4 pin=23 -> ON
+2026-06-04 20:35:23,900 [INFO] [ORCH][TOGGLE-ID] dev=cleaner socket4: diff_I=+15.4, diff_H1=+820.4, i_b_avg=160.1, i_off_avg=144.8 (n_b=4, n_off=5)
+2026-06-04 20:35:23,901 [INFO] [ORCH][TOGGLE-ID] cleaner presence-strong 채택: socket3 (presence=0.85, sig_di=120.9, diff_I=+102.3, diff_H1=+6572.9)
+2026-06-04 20:35:23,901 [INFO] [ORCH] assigned cleaner → socket3 (toggle-id)
+2026-06-04 20:35:34,830 [INFO] [NEAR-MISS] d_irms=5.8, d_h1=40.6, baseline_irms=141.0, baseline_h1=6522.0
+2026-06-04 20:35:35,677 [INFO] [EVENT-TRIG] cond2 ON d_irms=8.3, d_h1=234.2
+2026-06-04 20:35:35,678 [INFO] [PENDING ON] start frame=154, wait=8, pre_I=141.1, pre_H1=6522.5
+2026-06-04 20:35:39,203 [INFO] [ID-STABLE] chosen=tv conf=0.68 method=low_power_rf_signal_match_delta details={'abs': 'cleaner:0.99', 'delta': 'tv:0.68', 'range': 'dryer:0.05', 'dI': 24.2, 'dH1': 1436.3, 'dPabs': 13328.7}
+2026-06-04 20:35:39,203 [INFO] [ID-STABLE] probs_abs={'charger': 0.0, 'cleaner': 0.993, 'dryer': 0.007, 'microwave': 0.0, 'tv': 0.0}
+2026-06-04 20:35:39,204 [INFO] [ID-STABLE] probs_delta={'charger': 0.24, 'cleaner': 0.003, 'dryer': 0.073, 'microwave': 0.0, 'tv': 0.683}
+2026-06-04 20:35:39,205 [INFO] [ID-STABLE] range_scores={'charger': 0.394, 'cleaner': 3.742, 'dryer': 0.054, 'microwave': 3.505, 'tv': 0.695}
+2026-06-04 20:35:39,205 [INFO] [DEVICE ON] Socket2 <- tv (60W, conf=0.68, method=low_power_rf_signal_match_delta, d_irms=24.2, d_h1=1436.3, d_pabs=13328.7, details={'abs': 'cleaner:0.99', 'delta': 'tv:0.68', 'range': 'dryer:0.05', 'dI': 24.2, 'dH1': 1436.3, 'dPabs': 13328.7})
+2026-06-04 20:35:39,724 [INFO] [RELAY] socket2 pin=27 -> OFF
+2026-06-04 20:35:40,318 [INFO] [RELAY] socket2 pin=27 -> ON
+2026-06-04 20:35:40,585 [INFO] [ORCH][TOGGLE-ID] dev=tv socket2: diff_I=+4.2, diff_H1=+1029.7, i_b_avg=166.9, i_off_avg=162.7 (n_b=4, n_off=5)
+2026-06-04 20:35:40,913 [INFO] [RELAY] socket4 pin=23 -> OFF
+2026-06-04 20:35:41,381 [INFO] [RELAY] socket4 pin=23 -> ON
+2026-06-04 20:35:41,562 [INFO] [ORCH][TOGGLE-ID] dev=tv socket4: diff_I=+23.9, diff_H1=+1263.2, i_b_avg=162.7, i_off_avg=138.8 (n_b=4, n_off=5)
+2026-06-04 20:35:41,562 [INFO] [ORCH][TOGGLE-ID] tv presence-strong 채택: socket4 (presence=0.99, sig_di=24.2, diff_I=+23.9, diff_H1=+1263.2)
+2026-06-04 20:35:41,563 [INFO] [ORCH] assigned tv → socket4 (toggle-id)
+2026-06-04 20:35:41,564 [INFO] [RELAY] socket2 pin=27 -> OFF
+2026-06-04 20:35:41,565 [INFO] [ORCH] socket2: PENDING 30s expired -> OFF
+2026-06-04 20:35:50,109 [INFO] [H1-ONLY REJECT] active high-power ramp/mode explains change | d_irms=4.4, d_h1=306.6, d_pabs=1946.5
+2026-06-04 20:35:50,538 [INFO] [EVENT-TRIG] h1-only low-power ON d_irms=6.6, d_h1=450.4, d_pabs=3089.0
+2026-06-04 20:35:50,539 [INFO] [PENDING ON] start frame=183, wait=8, pre_I=137.9, pre_H1=6467.0
+2026-06-04 20:35:53,941 [INFO] [PRE-BASELINE FIX] pre_H1=6467.0 < 80% of expected=8758.6 (idle=64.1 + active sigs=8694.5); ORCH toggle drift 추정, 보정 → pre_H1=8758.6, pre_I=185.7
+2026-06-04 20:35:53,942 [INFO] [PENDING ON → ABORT] 정착 d_irms=-18.2, d_h1=-796.7 음수 → transient ON, 등록 폐기 (OFF 는 off_suspect 가 처리)
+2026-06-04 20:35:54,866 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-06-04 20:35:54,867 [INFO] [ORCH] external OFF: AI engine.active_devices['cleaner'] 강제 제거 + baseline sync (Irms=167.2, H1=7930.0)
+2026-06-04 20:35:54,868 [INFO] [ORCH] external relay OFF socket3: ASSIGNED(cleaner) → DEVICE_OFF
+2026-06-04 20:35:54,868 [INFO] [DASH-RESCAN] Socket3 relay OFF
+2026-06-04 20:35:56,717 [INFO] [NEAR-MISS] d_irms=-23.7, d_h1=-1337.4, baseline_irms=143.8, baseline_h1=6612.0
+2026-06-04 20:35:56,718 [INFO] [OFF-SUSPECT] H1 drop=1337.4 > 400 (floor=400, 부하비례=164, active_load=6548, baseline_h1=6612.0, current_h1=5274.7, active=['tv']) → orchestrator 전수 스캔 위임
+2026-06-04 20:35:56,874 [INFO] [ORCH][OFF-SCAN] 시작 targets=[(4, 'tv')] shortfall=1337.4
+2026-06-04 20:35:57,275 [INFO] [RELAY] socket4 pin=23 -> OFF
+2026-06-04 20:35:57,906 [INFO] [RELAY] socket4 pin=23 -> ON
+2026-06-04 20:35:58,171 [INFO] [ORCH][OFF-SCAN] tv@S4: ΔH1=+1078, sig_dh1=1436, ratio_h1=0.75, ΔI=+7.8 → present
+2026-06-04 20:35:58,172 [INFO] [ORCH][OFF-SCAN] 부재 소켓 없음 (전부 잔존, 교란=False)
+2026-06-04 20:36:08,532 [INFO] [NEAR-MISS] d_irms=1.0, d_h1=162.5, baseline_irms=48.4, baseline_h1=1094.4
+2026-06-04 20:36:09,032 [INFO] [EVENT-TRIG] h1-only low-power ON d_irms=2.5, d_h1=302.3, d_pabs=919.0
+2026-06-04 20:36:09,032 [INFO] [PENDING ON] start frame=233, wait=8, pre_I=48.4, pre_H1=1095.4
+2026-06-04 20:36:12,527 [INFO] [RELAY] socket3 pin=22 -> ON
+2026-06-04 20:36:12,528 [INFO] [ORCH] external relay ON socket3: DEVICE_OFF → PENDING (preserved label=cleaner)
+2026-06-04 20:36:12,529 [INFO] [DASH-RESCAN] Socket3 relay ON
+2026-06-04 20:36:12,970 [INFO] [PRE-BASELINE FIX] pre_H1=1095.4 < 80% of expected=1500.3 (idle=64.1 + active sigs=1436.3); ORCH toggle drift 추정, 보정 → pre_H1=1500.3, pre_I=64.8
+2026-06-04 20:36:13,160 [INFO] [PF OVERRIDE] H1 sig=charger(d_h1=688) -> PF=0.658 => 'tv' (drift fix)
+2026-06-04 20:36:13,161 [INFO] [ID-STABLE] chosen=tv conf=0.69 method=low_power_rf_signal_match_delta details={'abs': 'tv:0.45', 'delta': 'tv:0.69', 'range': 'dryer:0.08', 'dI': 0.6, 'dH1': 688.2, 'dPabs': 9401.6}
+2026-06-04 20:36:13,161 [INFO] [ID-STABLE] probs_abs={'charger': 0.007, 'cleaner': 0.21, 'dryer': 0.33, 'microwave': 0.003, 'tv': 0.45}
+2026-06-04 20:36:13,162 [INFO] [ID-STABLE] probs_delta={'charger': 0.227, 'cleaner': 0.003, 'dryer': 0.077, 'microwave': 0.0, 'tv': 0.693}
+2026-06-04 20:36:13,162 [INFO] [ID-STABLE] range_scores={'charger': 0.5, 'cleaner': 4.339, 'dryer': 0.077, 'microwave': 3.659, 'tv': 1.984}
+2026-06-04 20:36:13,163 [INFO] [ON ACTIVE-LABEL FIX] tv already active -> use inactive candidate charger
+2026-06-04 20:36:13,163 [INFO] [DEVICE ON] Socket3 <- charger (5W, conf=0.69, method=low_power_rf_signal_match_delta, d_irms=0.6, d_h1=688.2, d_pabs=9401.6, details={'abs': 'tv:0.45', 'delta': 'tv:0.69', 'range': 'dryer:0.08', 'dI': 0.6, 'dH1': 688.2, 'dPabs': 9401.6})
+2026-06-04 20:36:13,313 [INFO] [ORCH] assigned charger → socket3 (only-candidate (replace cleaner→charger))
+2026-06-04 20:36:17,556 [INFO] [RECLASSIFY] 'charger' signature update dI=17.9, dH1=1682.8, dPabs=20284.2
+2026-06-04 20:36:17,980 [INFO] [NEAR-MISS] d_irms=-26.8, d_h1=-1435.0, baseline_irms=97.6, baseline_h1=3967.2
+2026-06-04 20:36:17,981 [INFO] [OFF-SUSPECT] H1 drop=1435.0 > 400 (floor=400, 부하비례=98, active_load=3903, baseline_h1=3967.2, current_h1=2532.2, active=['tv', 'charger']) → orchestrator 전수 스캔 위임
+2026-06-04 20:36:18,049 [INFO] [ORCH][OFF-SCAN] 시작 targets=[(4, 'tv'), (3, 'charger')] shortfall=1435.0
+2026-06-04 20:36:18,547 [INFO] [RELAY] socket4 pin=23 -> OFF
+2026-06-04 20:36:19,275 [INFO] [RELAY] socket4 pin=23 -> ON
+2026-06-04 20:36:19,499 [INFO] [ORCH][OFF-SCAN] tv@S4: ΔH1=+876, sig_dh1=1436, ratio_h1=0.61, ΔI=+10.4 → present
+2026-06-04 20:36:19,848 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-06-04 20:36:20,420 [INFO] [RELAY] socket3 pin=22 -> ON
+2026-06-04 20:36:20,643 [INFO] [ORCH][OFF-SCAN] charger@S3: ΔH1=+125, sig_dh1=1683, ratio_h1=0.07, ΔI=+0.9 → absent
+2026-06-04 20:36:20,644 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-06-04 20:36:20,645 [INFO] [DEVICE OFF] charger confirmed by orchestrator full-scan (socket idx=3)
+2026-06-04 20:36:20,645 [INFO] [ORCH] charger OFF (full-scan) → socket3 relay OFF (standby cut)
+2026-06-04 20:36:20,645 [INFO] [ORCH][OFF-SCAN] shortfall 잔량=-247.8 ≤ 300.0 → 조기 종료
+2026-06-04 20:36:23,740 [INFO] [NEAR-MISS] d_irms=-0.1, d_h1=24.5, baseline_irms=94.9, baseline_h1=3035.7
+2026-06-04 20:36:24,559 [INFO] [RELAY] socket3 pin=22 -> ON
+2026-06-04 20:36:24,560 [INFO] [ORCH] external relay ON socket3: DEVICE_OFF → PENDING (preserved label=charger)
+2026-06-04 20:36:24,561 [INFO] [DASH-RESCAN] Socket3 relay ON
+2026-06-04 20:36:25,450 [INFO] [OFF-SUSPECT] H1 drop=1422.8 > 400 (floor=400, 부하비례=74, active_load=2967, baseline_h1=3030.7, current_h1=1608.0, active=['tv']) → orchestrator 전수 스캔 위임
+2026-06-04 20:36:25,587 [INFO] [ORCH][OFF-SCAN] 시작 targets=[(4, 'tv')] shortfall=1422.8
+2026-06-04 20:36:26,018 [INFO] [RELAY] socket4 pin=23 -> OFF
+2026-06-04 20:36:26,674 [INFO] [RELAY] socket4 pin=23 -> ON
+2026-06-04 20:36:26,935 [INFO] [ORCH][OFF-SCAN] tv@S4: ΔH1=-1217 (ratio_h1=-0.85, H1 교란) → ΔI=+4.2/sig_di=24 보조판정 → absent (ΔI 0근처=부재)
+2026-06-04 20:36:26,936 [INFO] [RELAY] socket4 pin=23 -> OFF
+2026-06-04 20:36:26,937 [INFO] [DEVICE OFF] tv confirmed by orchestrator full-scan (socket idx=2)
+2026-06-04 20:36:26,937 [INFO] [ORCH] tv OFF (full-scan) → socket4 relay OFF (standby cut)
+2026-06-04 20:36:26,938 [INFO] [ORCH][OFF-SCAN] shortfall 잔량=-13.5 ≤ 300.0 → 조기 종료
+2026-06-04 20:36:30,489 [INFO] [NEAR-MISS] d_irms=-7.9, d_h1=-28.7, baseline_irms=141.0, baseline_h1=6332.6
+2026-06-04 20:36:32,170 [INFO] [NEAR-MISS] d_irms=-8.1, d_h1=-62.3, baseline_irms=140.8, baseline_h1=6331.6
+2026-06-04 20:36:33,016 [INFO] [RELAY] socket4 pin=23 -> ON
+2026-06-04 20:36:33,017 [INFO] [ORCH] external relay ON socket4: DEVICE_OFF → PENDING (preserved label=tv)
+2026-06-04 20:36:33,017 [INFO] [DASH-RESCAN] Socket4 relay ON
+2026-06-04 20:36:34,266 [INFO] [NEAR-MISS] d_irms=-6.2, d_h1=-9.6, baseline_irms=140.6, baseline_h1=6330.2
+2026-06-04 20:36:35,160 [INFO] [EVENT-TRIG] h1-only low-power ON d_irms=0.9, d_h1=347.2, d_pabs=3069.4
+2026-06-04 20:36:35,161 [INFO] [PENDING ON] start frame=318, wait=8, pre_I=140.6, pre_H1=6331.0
+2026-06-04 20:36:38,802 [INFO] [ID-STABLE] chosen=tv conf=0.70 method=low_power_rf_signal_match_delta details={'abs': 'cleaner:0.99', 'delta': 'tv:0.70', 'range': 'dryer:0.05', 'dI': 26.9, 'dH1': 1646.5, 'dPabs': 18384.8}
+2026-06-04 20:36:38,803 [INFO] [ID-STABLE] probs_abs={'charger': 0.003, 'cleaner': 0.987, 'dryer': 0.007, 'microwave': 0.003, 'tv': 0.0}
+2026-06-04 20:36:38,803 [INFO] [ID-STABLE] probs_delta={'charger': 0.227, 'cleaner': 0.0, 'dryer': 0.073, 'microwave': 0.0, 'tv': 0.7}
+2026-06-04 20:36:38,804 [INFO] [ID-STABLE] range_scores={'charger': 0.548, 'cleaner': 3.571, 'dryer': 0.047, 'microwave': 3.465, 'tv': 0.471}
+2026-06-04 20:36:38,804 [INFO] [DEVICE ON] Socket4 <- tv (60W, conf=0.70, method=low_power_rf_signal_match_delta, d_irms=26.9, d_h1=1646.5, d_pabs=18384.8, details={'abs': 'cleaner:0.99', 'delta': 'tv:0.70', 'range': 'dryer:0.05', 'dI': 26.9, 'dH1': 1646.5, 'dPabs': 18384.8})
+2026-06-04 20:36:39,349 [INFO] [RELAY] socket4 pin=23 -> OFF
+2026-06-04 20:36:40,084 [INFO] [RELAY] socket4 pin=23 -> ON
+2026-06-04 20:36:40,258 [INFO] [ORCH][RESTORE-VERIFY] socket4 dev=tv 위치 검증 통과 ΔI=+24.2 ≥ 13.4, sim=0.83
+2026-06-04 20:36:40,259 [INFO] [ORCH] assigned tv → socket4 (auto-restore verified, sim=0.83, ΔI=+24.2)
+2026-06-04 20:36:42,580 [INFO] [EVENT-TRIG] h1-only low-power ON d_irms=0.3, d_h1=327.9, d_pabs=-35.1
+2026-06-04 20:36:42,581 [INFO] [PENDING ON] start frame=344, wait=8, pre_I=145.0, pre_H1=6055.6
+2026-06-04 20:36:46,021 [INFO] [PRE-BASELINE FIX] pre_H1=6055.6 < 80% of expected=7977.5 (idle=6331.0 + active sigs=1646.5); ORCH toggle drift 추정, 보정 → pre_H1=7977.5, pre_I=167.5
+2026-06-04 20:36:46,022 [INFO] [PENDING ON → ABORT] 정착 d_irms=-32.0, d_h1=-1579.8 음수 → transient ON, 등록 폐기 (OFF 는 off_suspect 가 처리)
+2026-06-04 20:36:46,862 [INFO] [DASH-RESCAN] Socket3 re-scanning...
+2026-06-04 20:36:46,863 [INFO] [ORCH][RESCAN] socket3 수동 재추론 시작 (prev=charger/PENDING)
+2026-06-04 20:36:47,947 [INFO] [RELAY] socket3 pin=22 -> ON
+2026-06-04 20:36:48,101 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-06-04 20:36:48,141 [INFO] [RELAY] socket3 pin=22 -> ON
+2026-06-04 20:36:48,295 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-06-04 20:36:48,333 [INFO] [RELAY] socket3 pin=22 -> ON
+2026-06-04 20:36:48,487 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-06-04 20:36:48,526 [INFO] [RELAY] socket3 pin=22 -> ON
+2026-06-04 20:36:48,680 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-06-04 20:36:48,719 [INFO] [RELAY] socket3 pin=22 -> ON
+2026-06-04 20:36:48,873 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-06-04 20:36:48,912 [INFO] [RELAY] socket3 pin=22 -> ON
+2026-06-04 20:36:49,243 [INFO] [ORCH][RESCAN] socket3: ΔI=+116.7, ΔH1=+6851.4 (on I=159.1/H1=5064, off I=42.5/H1=-1788)
+2026-06-04 20:36:49,430 [INFO] [ID-STABLE] chosen=cleaner conf=0.97 method=cleaner_delta_abs_priority details={'abs': 'cleaner:0.97', 'delta': 'dryer:0.59', 'range': 'dryer:0.00', 'dI': 116.7, 'dH1': 6851.4, 'dPabs': 71458.4}
+2026-06-04 20:36:49,431 [INFO] [ID-STABLE] probs_abs={'charger': 0.0, 'cleaner': 0.967, 'dryer': 0.033, 'microwave': 0.0, 'tv': 0.0}
+2026-06-04 20:36:49,431 [INFO] [ID-STABLE] probs_delta={'charger': 0.02, 'cleaner': 0.36, 'dryer': 0.59, 'microwave': 0.003, 'tv': 0.027}
+2026-06-04 20:36:49,432 [INFO] [ID-STABLE] range_scores={'charger': 5.428, 'cleaner': 0.309, 'dryer': 0.0, 'microwave': 2.575, 'tv': 8.77}
+2026-06-04 20:36:49,433 [INFO] [ORCH][RESCAN] socket3 분류: device=cleaner, conf=0.97, method=cleaner_delta_abs_priority, details={'abs': 'cleaner:0.97', 'delta': 'dryer:0.59', 'range': 'dryer:0.00', 'dI': 116.7, 'dH1': 6851.4, 'dPabs': 71458.4}
+2026-06-04 20:36:49,433 [INFO] [DEVICE OFF] charger confirmed by orchestrator full-scan (socket idx=None)
+2026-06-04 20:36:49,434 [INFO] [ORCH] assigned cleaner → socket3 (manual_rescan)
+2026-06-04 20:36:49,435 [INFO] [DASH-RESCAN] Socket3 re-scan: CLEANER (corrected)
+2026-06-04 20:36:59,531 [INFO] [NEAR-MISS] d_irms=0.3, d_h1=-107.4, baseline_irms=160.2, baseline_h1=7564.7
+2026-06-04 20:37:01,201 [INFO] [NEAR-MISS] d_irms=-0.6, d_h1=-118.6, baseline_irms=160.2, baseline_h1=7562.1
+2026-06-04 20:37:02,873 [INFO] [NEAR-MISS] d_irms=-5.4, d_h1=-257.1, baseline_irms=160.1, baseline_h1=7558.1
+2026-06-04 20:37:04,597 [INFO] [NEAR-MISS] d_irms=-9.0, d_h1=-389.3, baseline_irms=160.0, baseline_h1=7551.0
+2026-06-04 20:37:05,521 [INFO] [OFF-SUSPECT] H1 drop=461.3 > 400 (floor=400, 부하비례=30, active_load=1215, baseline_h1=7546.0, current_h1=7084.7, active=['tv', 'cleaner']) → orchestrator 전수 스캔 위임
+2026-06-04 20:37:05,636 [INFO] [ORCH][OFF-SCAN] 시작 targets=[(4, 'tv'), (3, 'cleaner')] shortfall=461.3
+2026-06-04 20:37:06,068 [INFO] [RELAY] socket4 pin=23 -> OFF
+2026-06-04 20:37:06,790 [INFO] [RELAY] socket4 pin=23 -> ON
+2026-06-04 20:37:07,013 [INFO] [ORCH][OFF-SCAN] tv@S4: ΔH1=+4452, sig_dh1=1646, ratio_h1=2.70, ΔI=+89.4 → present
+2026-06-04 20:37:07,360 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-06-04 20:37:07,931 [INFO] [RELAY] socket3 pin=22 -> ON
+2026-06-04 20:37:08,156 [INFO] [ORCH][OFF-SCAN] cleaner@S3: ΔH1=+112, sig_dh1=6851, ratio_h1=0.02, ΔI=+1.8 → absent
+2026-06-04 20:37:08,157 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-06-04 20:37:08,157 [INFO] [DEVICE OFF] cleaner confirmed by orchestrator full-scan (socket idx=3)
+2026-06-04 20:37:08,158 [INFO] [ORCH] cleaner OFF (full-scan) → socket3 relay OFF (standby cut)
+2026-06-04 20:37:08,158 [INFO] [ORCH][OFF-SCAN] shortfall 잔량=-6390.0 ≤ 300.0 → 조기 종료
+2026-06-04 20:37:13,789 [INFO] [NEAR-MISS] d_irms=-0.4, d_h1=-138.6, baseline_irms=41.6, baseline_h1=205.4
+2026-06-04 20:37:15,610 [INFO] [BUTTON1] closed
+2026-06-04 20:37:15,613 [INFO] [BUTTON2] closed
+2026-06-04 20:37:15,866 [INFO] [TIMER] manager closed
+2026-06-04 20:37:15,927 [INFO] [ORCH] closed
+2026-06-04 20:37:15,929 [INFO] [RELAY] socket1 pin=17 -> OFF
+2026-06-04 20:37:15,930 [INFO] [RELAY] socket2 pin=27 -> OFF
+2026-06-04 20:37:15,931 [INFO] [RELAY] socket3 pin=22 -> OFF
+2026-06-04 20:37:15,932 [INFO] [RELAY] socket4 pin=23 -> OFF
+2026-06-04 20:37:15,933 [INFO] [RELAY] closed (all OFF, GPIO cleanup)

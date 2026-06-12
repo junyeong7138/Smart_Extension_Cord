@@ -14,10 +14,9 @@ import numpy as np
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# 💡 핵심: spi_core.py 등 HW 모듈이 있는 RaspberryPi/hardware 를 탐색 경로에 추가
-# (2026-06-12 폴더 정리: 상위 폴더 직속 → hardware/ 로 이동)
+# 💡 핵심: spi_core.py가 있는 상위 폴더(RaspberryPi)를 탐색 경로에 추가
 PARENT_DIR = os.path.abspath(os.path.join(BASE_DIR, ".."))
-sys.path.append(os.path.join(PARENT_DIR, "hardware"))
+sys.path.append(PARENT_DIR)
 
 # 이제 상위 폴더에 있는 모듈을 문제없이 불러올 수 있습니다!
 from spi_core import SPICore
